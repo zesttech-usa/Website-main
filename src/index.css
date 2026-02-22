@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1, h2, h3, h4, h5, h6, .font-display {
+        font-family: 'Coolvetica', sans-serif;
+        font-weight: 500 !important;
+    }
+}
+
 @layer utilities {
     .glass-card {
         background: rgba(255, 255, 255, 0.05);
