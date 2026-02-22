@@ -11,7 +11,9 @@ const AdminPanel = () => {
         title: '',
         department: '',
         location: '',
+        location: '',
         type: 'Full-time',
+        currency: '$',
         salaryRange: '',
         experienceLevel: '',
         description: '',
@@ -77,6 +79,7 @@ const AdminPanel = () => {
                 department: '',
                 location: '',
                 type: 'Full-time',
+                currency: '$',
                 salaryRange: '',
                 experienceLevel: '',
                 description: '',
@@ -252,14 +255,27 @@ const AdminPanel = () => {
 
                             <div className="col-span-1 md:col-span-2">
                                 <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-2">Salary Range</label>
-                                <input
-                                    type="text"
-                                    name="salaryRange"
-                                    value={formData.salaryRange}
-                                    onChange={handleInputChange}
-                                    placeholder="e.g. $120k - $150k"
-                                    className="w-full rounded-xl border-slate-300 dark:border-navy-600 bg-slate-50 dark:bg-navy-900 shadow-sm focus:border-primary focus:ring-primary dark:text-white transition-colors"
-                                />
+                                <div className="flex relative">
+                                    <select
+                                        name="currency"
+                                        value={formData.currency}
+                                        onChange={handleInputChange}
+                                        className="rounded-l-xl border-slate-300 dark:border-navy-600 bg-slate-100 dark:bg-navy-800 focus:border-primary focus:ring-primary dark:text-white transition-colors border-r-0 px-4"
+                                    >
+                                        <option value="$">$(USD)</option>
+                                        <option value="₹">₹(INR)</option>
+                                        <option value="€">€(EUR)</option>
+                                        <option value="£">£(GBP)</option>
+                                    </select>
+                                    <input
+                                        type="text"
+                                        name="salaryRange"
+                                        value={formData.salaryRange}
+                                        onChange={handleInputChange}
+                                        placeholder="e.g. 120k - 150k"
+                                        className="w-full rounded-r-xl border-slate-300 dark:border-navy-600 bg-slate-50 dark:bg-navy-900 shadow-sm focus:border-primary focus:ring-primary dark:text-white transition-colors"
+                                    />
+                                </div>
                             </div>
 
                             <div className="col-span-1 md:col-span-2">

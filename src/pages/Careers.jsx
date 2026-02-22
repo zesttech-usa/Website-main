@@ -8,6 +8,7 @@ const Careers = () => {
     const [jobs, setJobs] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterType, setFilterType] = useState('All');
+    const [sortBy, setSortBy] = useState('Newest');
 
     useEffect(() => {
         // Attempting to load jobs from imported JSON.
@@ -15,12 +16,18 @@ const Careers = () => {
         setJobs(jobsData || []);
     }, []);
 
-    const filteredJobs = jobs.filter(job => {
-        const matchesSearch = job.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            job.department?.toLowerCase().includes(searchTerm.toLowerCase());
-        const matchesType = filterType === 'All' || job.type === filterType;
-        return matchesSearch && matchesType;
-    });
+    const filteredJobs = jobs
+        .filter(job => {
+            const matchesSearch = job.title?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                job.department?.toLowerCase().includes(searchTerm.toLowerCase());
+            const matchesType = filterType === 'All' || job.type === filterType;
+            return matchesSearch && matchesType;
+        })
+        .sort((a, b) => {
+            const dateA = new Date(a.createdAt || 0);
+            const dateB = new Date(b.createdAt || 0);
+            return sortBy === 'Newest' ? dateB - dateA : dateA - dateB;
+        });
 
     const jobTypes = ['All', 'Full-time', 'Contract', 'Part-time', 'Freelance'];
 
@@ -76,6 +83,16 @@ const Careers = () => {
                                 ))}
                             </select>
                         </div>
+                        <div className="flex sm:w-auto relative">
+                            <select
+                                value={sortBy}
+                                onChange={(e) => setSortBy(e.target.value)}
+                                className="block w-full sm:w-48 px-4 py-3 border border-slate-200 dark:border-navy-600 rounded-xl bg-slate-50 dark:bg-navy-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-colors"
+                            >
+                                <option value="Newest">Sort by Newest</option>
+                                <option value="Oldest">Sort by Oldest</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
@@ -120,7 +137,7 @@ const Careers = () => {
                                             </div>
                                             <div className="flex items-center gap-1.5">
                                                 <Clock className="w-4 h-4" />
-                                                {job.experienceLevel || 'Experience not specified'}
+                                                <span>Experience: {job.experienceLevel || 'Not specified'}</span>
                                             </div>
                                         </div>
                                     </div>
@@ -128,11 +145,11 @@ const Careers = () => {
                                     {/* Actions */}
                                     <div className="flex items-center gap-4 md:flex-col md:items-end md:justify-center">
                                         <p className="text-lg font-semibold text-navy-900 dark:text-white">
-                                            {job.salaryRange || 'Competitive'}
+                                            {job.salaryRange ? `${job.currency || '$'}${job.salaryRange}` : 'Competitive'}
                                         </p>
                                         <Link
                                             to={`/careers/${job.id}`}
-                                            className="inline-flex justify-center items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-xl text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary shadow-sm hover:shadow transition-all duration-200"
+                                            className="inline-flex justify-center items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-xl text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm hover:shadow transition-all duration-200"
                                         >
                                             Apply Now
                                         </Link>

@@ -159,7 +159,7 @@ const JobDetail = () => {
                             </div>
                             <div>
                                 <p className="text-xs text-slate-500 dark:text-slate-400 font-medium uppercase tracking-wider">Salary</p>
-                                <p className="text-sm font-semibold text-navy-900 dark:text-white">{job.salaryRange || 'Competitive'}</p>
+                                <p className="text-sm font-semibold text-navy-900 dark:text-white">{job.salaryRange ? `${job.currency || '$'}${job.salaryRange}` : 'Competitive'}</p>
                             </div>
                         </div>
                         <div className="flex items-start gap-3">
@@ -206,8 +206,8 @@ const JobDetail = () => {
                                         animate={{ opacity: 1, y: 0, height: 'auto' }}
                                         exit={{ opacity: 0, height: 0 }}
                                         className={`mb-6 p-4 rounded-xl flex items-start gap-3 text-sm ${status.type === 'success'
-                                                ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20'
-                                                : 'bg-red-50 text-red-800 dark:bg-red-500/10 dark:text-red-400 border border-red-200 dark:border-red-500/20'
+                                            ? 'bg-emerald-50 text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20'
+                                            : 'bg-red-50 text-red-800 dark:bg-red-500/10 dark:text-red-400 border border-red-200 dark:border-red-500/20'
                                             }`}
                                     >
                                         {status.type === 'success' ? <CheckCircle className="w-5 h-5 shrink-0" /> : <AlertCircle className="w-5 h-5 shrink-0" />}
