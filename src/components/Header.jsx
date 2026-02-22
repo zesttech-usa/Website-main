@@ -1,0 +1,149 @@
+import * as React from "react"
+import { useState, useEffect } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Info, Settings, Users, Menu, Sun, Moon } from "lucide-react"
+
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
+
+const navigationLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About Us" },
+    { href: "/jobseekers", label: "Jobseekers" },
+    { href: "/services", label: "Services" },
+    { href: "/industries", label: "Industries" },
+    { href: "/contact", label: "Contact" },
+]
+
+export default function Header() {
+    const [isDark, setIsDark] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 20)
+        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [])
+
+    useEffect(() => {
+        if (isDark) {
+            document.documentElement.classList.add("dark")
+        } else {
+            document.documentElement.classList.remove("dark")
+        }
+    }, [isDark])
+
+    const toggleDarkMode = () => setIsDark(!isDark)
+
+    return (
+        <>
+            <div className="hidden lg:block bg-navy-950 text-white py-2 text-sm border-b border-white/10 transition-colors">
+                <div className="container mx-auto px-6 flex justify-between items-center">
+                    <div className="flex items-center space-x-6">
+                        <a className="flex items-center gap-2 hover:text-primary transition-colors" href="mailto:info@zesttechnologies.com">
+                            <Info size={14} className="text-primary" /> info@zesttechnologies.com
+                        </a>
+                        <span className="flex items-center gap-2 opacity-80">
+                            <Settings size={14} className="text-primary" /> 10130 Mallard Creek Rd, Suite 300, Charlotte, NC 28262, US
+                        </span>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                        <Button variant="ghost" size="icon" className="h-6 w-6 text-white hover:text-primary">
+                            <Users size={16} />
+                        </Button>
+                    </div>
+                </div>
+            </div>
+
+            <header className={cn(
+                "sticky top-0 z-50 w-full transition-all duration-300 border-b",
+                isScrolled
+                    ? "bg-white/80 dark:bg-navy-950/80 backdrop-blur-md py-2 border-slate-100 dark:border-slate-800 shadow-sm"
+                    : "bg-white dark:bg-navy-950 py-4 border-transparent"
+            )}>
+                <div className="container mx-auto px-6 flex h-14 items-center gap-8">
+                    {/* Logo - Stays left */}
+                    <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
+                        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:rotate-6 shadow-lg shadow-primary/20">Z</div>
+                        <span className="text-xl font-bold tracking-tight text-navy-950 dark:text-white hidden sm:block uppercase">Zest Technologies</span>
+                    </Link>
+
+                    {/* Centered Navigation */}
+                    <div className="flex-grow flex justify-center">
+                        <nav className="hidden md:flex items-center gap-1">
+                            {navigationLinks.map((link, index) => (
+                                <Link
+                                    key={index}
+                                    to={link.href}
+                                    className={cn(
+                                        "text-navy-950/70 dark:text-white/70 hover:text-primary dark:hover:text-primary px-3 py-2 font-semibold uppercase text-xs tracking-wider transition-colors",
+                                        pathname === link.href && "text-primary dark:text-primary"
+                                    )}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
+
+                    {/* Actions - Stays right */}
+                    <div className="flex items-center gap-3 flex-shrink-0">
+                        <button
+                            className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-navy-900 transition-colors text-navy-950 dark:text-white"
+                            onClick={toggleDarkMode}
+                        >
+                            {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                        </button>
+
+                        <div className="hidden sm:flex items-center gap-3">
+                            <Button asChild size="sm" className="bg-primary hover:bg-orange-600 text-white font-semibold text-xs uppercase tracking-wider px-6">
+                                <Link to="/careers">Job Openings</Link>
+                            </Button>
+                        </div>
+
+                        <div className="md:hidden">
+                            <Popover>
+                                <PopoverTrigger asChild>
+                                    <Button variant="ghost" size="icon" className="text-navy-950 dark:text-white">
+                                        <Menu size={24} />
+                                    </Button>
+                                </PopoverTrigger>
+                                <PopoverContent align="end" className="w-[80vw] p-4 bg-white dark:bg-navy-950 dark:border-slate-800">
+                                    <div className="flex flex-col gap-4">
+                                        {navigationLinks.map((link, index) => (
+                                            <div key={index} className="flex flex-col gap-2">
+                                                <Link
+                                                    to={link.href}
+                                                    className={cn(
+                                                        "text-navy-950 dark:text-white hover:text-primary px-2 py-1 text-sm font-bold uppercase tracking-wider",
+                                                        pathname === link.href && "text-primary dark:text-primary"
+                                                    )}
+                                                >
+                                                    {link.label}
+                                                </Link>
+                                                {index < navigationLinks.length - 1 && <div className="h-px bg-slate-100 dark:bg-slate-800 my-1" />}
+                                            </div>
+                                        ))}
+                                        <div className="flex flex-col gap-2 mt-2">
+                                            <Button asChild className="w-full bg-primary hover:bg-orange-600">
+                                                <Link to="/careers">Job Openings</Link>
+                                            </Button>
+                                        </div>
+                                    </div>
+                                </PopoverContent>
+                            </Popover>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </>
+    )
+}
