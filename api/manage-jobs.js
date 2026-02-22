@@ -3,13 +3,15 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: 'Method not allowed' });
     }
 
-    const { job, adminPassword } = req.body;
+    const { action, job, jobId, adminPassword } = req.body;
 
     if (!adminPassword || adminPassword !== process.env.ADMIN_PASSWORD) {
         return res.status(401).json({ message: 'Unauthorized: Invalid Admin Password' });
     }
 
-    if (!job) {
+    if (action === 'delete' && !jobId) {
+        return res.status(400).json({ message: 'Bad Request: Job ID is required for deletion' });
+    } else if (action !== 'delete' && !job) {
         return res.status(400).json({ message: 'Bad Request: Job data is required' });
     }
 
@@ -56,13 +58,25 @@ export default async function handler(req, res) {
             jobs = [];
         }
 
-        // 2. Append the new job
-        const newJob = {
-            ...job,
-            id: job.id || Date.now().toString(), // Ensure ID exists
-            createdAt: new Date().toISOString()
-        };
-        jobs.push(newJob);
+        let commitMessage = '';
+
+        if (action === 'delete') {
+            const initialLength = jobs.length;
+            jobs = jobs.filter(j => j.id.toString() !== jobId.toString());
+            if (jobs.length === initialLength) {
+                return res.status(404).json({ message: 'Job not found in database' });
+            }
+            commitMessage = `Delete job ID: ${jobId}`;
+        } else {
+            // 2. Append the new job
+            const newJob = {
+                ...job,
+                id: job.id || Date.now().toString(), // Ensure ID exists
+                createdAt: new Date().toISOString()
+            };
+            jobs.push(newJob);
+            commitMessage = `Add new job: ${job.title || 'Untitled'}`;
+        }
 
         // 3. Commit the change back to the repo
         const updatedContent = Buffer.from(JSON.stringify(jobs, null, 2)).toString('base64');
@@ -77,7 +91,7 @@ export default async function handler(req, res) {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    message: `Add new job: ${job.title || 'Untitled'}`,
+                    message: commitMessage,
                     content: updatedContent,
                     sha: currentSha,
                 }),
@@ -91,8 +105,9 @@ export default async function handler(req, res) {
         }
 
         return res.status(200).json({
-            message: 'Job published! The site repository has been updated and will redeploy in about 60 seconds.',
-            job: newJob
+            message: action === 'delete'
+                ? 'Job deleted! The site repository has been updated and will redeploy in about 60 seconds.'
+                : 'Job published! The site repository has been updated and will redeploy in about 60 seconds.'
         });
 
     } catch (error) {

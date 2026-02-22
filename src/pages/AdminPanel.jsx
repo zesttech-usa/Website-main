@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ShieldCheck, PlusCircle, CheckCircle, AlertCircle, RefreshCw } from 'lucide-react';
+import { ShieldCheck, PlusCircle, CheckCircle, AlertCircle, RefreshCw, Trash2 } from 'lucide-react';
+import jobsData from '../data/jobs.json';
 
 const AdminPanel = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState('');
     const [authError, setAuthError] = useState('');
+    const [jobsList, setJobsList] = useState(jobsData || []);
 
     const [formData, setFormData] = useState({
         title: '',
@@ -86,19 +88,67 @@ const AdminPanel = () => {
                 featured: false
             });
 
+            // Add to UI optimistically
+            setJobsList([...jobsList, { ...formData, id: Date.now() }]);
+
+            setTimeout(() => {
+                setStatus(prev => prev.type === 'success' ? { type: '', message: '' } : prev);
+            }, 5000);
+            setSubmitting(false);
+
         } catch (error) {
             if (error.message !== 'Unauthorized') {
                 setStatus({ type: 'error', message: error.message });
             }
-        } finally {
-            if (status.type !== 'error' && error?.message !== 'Unauthorized') {
-                setTimeout(() => {
-                    setSubmitting(false);
-                    if (status.type === 'success') setStatus({ type: '', message: '' });
-                }, 5000); // keep success message for a bit longer
-            } else {
-                setSubmitting(false);
+            setSubmitting(false);
+        }
+    };
+
+    const handleDeleteJob = async (id) => {
+        if (!window.confirm('Are you sure you want to delete this job posting? This cannot be undone.')) return;
+
+        setSubmitting(true);
+        setStatus({ type: 'processing', message: 'Deleting from Zest Portal... The site will update in about 60 seconds.' });
+
+        try {
+            const payload = {
+                adminPassword: password,
+                action: 'delete',
+                jobId: id
+            };
+
+            const response = await fetch('/api/manage-jobs', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                if (response.status === 401) {
+                    setIsAuthenticated(false);
+                    setAuthError('Invalid Admin Password. Please try again.');
+                    throw new Error('Unauthorized');
+                }
+                throw new Error(data.message || 'Failed to delete job.');
             }
+
+            setStatus({ type: 'success', message: data.message || 'Job deleted successfully!' });
+
+            // Remove from UI list
+            setJobsList(jobsList.filter(j => j.id.toString() !== id.toString()));
+
+            setTimeout(() => {
+                setStatus(prev => prev.type === 'success' ? { type: '', message: '' } : prev);
+            }, 5000);
+            setSubmitting(false);
+
+        } catch (error) {
+            if (error.message !== 'Unauthorized') {
+                setStatus({ type: 'error', message: error.message });
+            }
+            setSubmitting(false);
         }
     };
 
@@ -334,6 +384,35 @@ const AdminPanel = () => {
                     </form>
 
                 </div>
+
+                {/* Active Jobs List */}
+                <div className="mt-12 bg-white dark:bg-navy-800 rounded-3xl p-6 sm:p-10 shadow-sm border border-slate-200 dark:border-navy-700">
+                    <h2 className="text-2xl font-display font-bold text-navy-900 dark:text-white mb-6">Active Jobs</h2>
+
+                    {jobsList.length === 0 ? (
+                        <p className="text-slate-500 dark:text-slate-400">No active job postings found.</p>
+                    ) : (
+                        <div className="space-y-4">
+                            {jobsList.map(job => (
+                                <div key={job.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 rounded-xl border border-slate-200 dark:border-navy-600 bg-slate-50 dark:bg-navy-900/50">
+                                    <div>
+                                        <h3 className="font-bold text-navy-900 dark:text-white">{job.title}</h3>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400">{job.department} • {job.location}</p>
+                                    </div>
+                                    <button
+                                        onClick={() => handleDeleteJob(job.id)}
+                                        disabled={submitting}
+                                        className="mt-4 sm:mt-0 inline-flex items-center px-4 py-2 text-sm font-medium text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-500/10 hover:bg-red-100 dark:hover:bg-red-500/20 rounded-lg transition-colors disabled:opacity-50"
+                                    >
+                                        <Trash2 className="w-4 h-4 mr-2" />
+                                        Delete
+                                    </button>
+                                </div>
+                            ))}
+                        </div>
+                    )}
+                </div>
+
             </div>
         </div>
     );
