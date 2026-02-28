@@ -19,17 +19,20 @@ export default function Home() {
                 </div>
                 <div className="container mx-auto px-6 relative z-20">
                     <div className="max-w-3xl">
-                        <span className="inline-block bg-primary/20 text-primary border border-primary/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 backdrop-blur-sm">
-                            Tech Talent Solutions For You
-                        </span>
+                        <div className="flex flex-col gap-2 mb-6">
+                            <span className="inline-block bg-light-teal text-primary border border-primary/30 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest backdrop-blur-sm self-start">
+                                Tech Talent Solutions For You
+                            </span>
+                            <span className="text-primary font-bold tracking-[0.2em] text-sm uppercase">Energy. Expertise. Excellence.</span>
+                        </div>
                         <h1 className="text-5xl md:text-7xl font-semibold text-white mb-6 leading-[1.1]">
                             Expert IT Staffing for <span className="text-primary">Your Business Growth</span>
                         </h1>
                         <p className="text-lg text-slate-300 mb-10 max-w-xl leading-relaxed">
-                            Connecting world-class enterprises with elite technology professionals. We bridge the gap between innovation and execution with tailored staffing strategies.
+                            Uniting global industry leaders with top-tier technical specialists. We translate technological vision into operational reality through precision-targeted talent acquisition.
                         </p>
                         <div className="flex flex-wrap gap-4">
-                            <Link to="/jobseekers" className="inline-block bg-primary hover:bg-orange-600 text-white px-10 py-4 rounded font-semibold transition-all transform hover:-translate-y-1 hover:shadow-xl">Explore Now</Link>
+                            <Link to="/jobseekers" className="inline-block bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded font-semibold transition-all transform hover:-translate-y-1 hover:shadow-xl">Explore Now</Link>
                             <Link to="/contact" className="inline-block bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 px-10 py-4 rounded font-semibold transition-all hover:border-white">Contact Us</Link>
                         </div>
                     </div>
@@ -46,11 +49,11 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="bg-white dark:bg-navy-800 p-8 rounded shadow-sm border-l-4 border-primary group hover:shadow-xl hover:-translate-y-2 transition-all"
                         >
-                            <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 bg-light-teal dark:bg-primary/20 rounded flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                                 <span className="material-symbols-outlined text-4xl">workspace_premium</span>
                             </div>
                             <h3 className="text-xl font-semibold mb-3">Award winning Company</h3>
-                            <p className="text-slate-500 dark:text-slate-400">Recognized for excellence in IT staffing and solution delivery across North America.</p>
+                            <p className="text-slate-500 dark:text-slate-400">Awarded for outstanding performance in technical recruitment and strategic solution implementation throughout North America.</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -63,7 +66,7 @@ export default function Home() {
                                 <span className="material-symbols-outlined text-4xl">verified</span>
                             </div>
                             <h3 className="text-xl font-semibold mb-3">Best quality work</h3>
-                            <p className="text-slate-400">Delivering top-notch talent and expertise for exceptional results in every project engagement.</p>
+                            <p className="text-slate-400">Supplying premier technical proficiency and high-impact human capital to ensure superior outcomes for every corporate initiative.</p>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -72,11 +75,11 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="bg-white dark:bg-navy-800 p-8 rounded shadow-sm border-l-4 border-primary group hover:shadow-xl hover:-translate-y-2 transition-all"
                         >
-                            <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/30 rounded flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                            <div className="w-16 h-16 bg-light-teal dark:bg-primary/20 rounded flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
                                 <span className="material-symbols-outlined text-4xl">sentiment_satisfied</span>
                             </div>
                             <h3 className="text-xl font-semibold mb-3">Satisfaction guarantee</h3>
-                            <p className="text-slate-500 dark:text-slate-400">Ensuring your complete satisfaction with our tailored IT services and dedicated support.</p>
+                            <p className="text-slate-500 dark:text-slate-400">Guaranteeing seamless alignment with your business goals through customized IT solutions and tireless operational support.</p>
                         </motion.div>
                     </div>
                 </div>
@@ -116,13 +119,16 @@ export default function Home() {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             viewport={{ once: true, margin: "-50px" }}
                         >
-                            <span className="inline-block bg-primary/10 text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest mb-4 hover:bg-primary/20 transition-colors cursor-default">Zest Technologies LLC</span>
+                            <div className="flex flex-col gap-2 mb-4">
+                                <span className="inline-block bg-light-teal text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest hover:bg-light-teal transition-colors cursor-default self-start">Zest Technologies LLC</span>
+                                <span className="text-primary/80 font-bold tracking-wider text-xs uppercase">Energy. Expertise. Excellence.</span>
+                            </div>
                             <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-tight">Your Partner for <span className="text-primary relative inline-block group">Elite IT Staffing<span className="absolute bottom-0 left-0 w-0 h-1 bg-primary/30 transition-all duration-300 group-hover:w-full"></span></span></h2>
                             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed hover:text-slate-900 dark:hover:text-white transition-colors">
-                                Welcome to Zest Technologies LLC, your trusted partner in IT staffing and technology talent solutions. We specialize in delivering customized staffing services designed to align with your unique business objectives and technical requirements.
+                                Welcome to Zest Technologies LLC, your premier ally in strategic IT recruitment and technical resource optimization. We excel at providing bespoke staffing architectures specifically engineered to meet your organization's distinct goals and infrastructure needs.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed hover:text-slate-900 dark:hover:text-white transition-colors">
-                                Whether you're looking to build a high-performing IT team or need assistance with a specific project, we've got you covered. At Zest Technologies LLC, we understand the challenges of today's fast-paced IT landscape, and we're here to support you every step of the way.
+                                From assembling elite cross-functional engineering teams to providing surgical expertise for mission-critical projects, our capabilities are comprehensive. We navigate the complexities of the modern digital landscape so you can focus on core innovation while we handle the technical depth.
                             </p>
                             <ul className="space-y-4 mb-10">
                                 <li className="flex items-center gap-3 group/li"><span className="material-symbols-outlined text-primary font-semibold group-hover/li:scale-125 transition-transform">check_circle</span> <span className="font-semibold group-hover/li:text-primary transition-colors">Tailored Staffing Solutions</span></li>
@@ -144,7 +150,7 @@ export default function Home() {
                         viewport={{ once: true, margin: "-50px" }}
                         className="text-center mb-16"
                     >
-                        <span className="bg-primary/10 text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest mb-4 inline-block hover:bg-primary/20 transition-colors cursor-default">Our Services</span>
+                        <span className="bg-light-teal text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest mb-4 inline-block hover:bg-light-teal transition-colors cursor-default">Our Services</span>
                         <h2 className="text-4xl font-semibold">Enterprise Technology <span className="text-primary relative inline-block group">Capabilities<span className="absolute bottom-0 left-0 w-0 h-1 bg-primary/30 transition-all duration-300 group-hover:w-full"></span></span></h2>
                     </motion.div>
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -159,7 +165,7 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">IT Staffing Solutions</h3>
-                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Scalable staffing models to support your internal teams with elite technology professionals.</p>
+                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Dynamic resource allocation strategies that fortify your internal capabilities with world-class technical experts.</p>
                                 <div className="flex items-center gap-2 text-primary font-semibold text-sm uppercase">Read More <span className="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span></div>
                             </div>
                         </motion.div>
@@ -174,7 +180,7 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">Project-Based IT Consulting</h3>
-                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">End-to-end strategic planning and technical execution for your most critical business projects.</p>
+                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Comprehensive project lifecycles, from high-level strategic architecture to full-stack technical deployment for your key priorities.</p>
                                 <div className="flex items-center gap-2 text-primary font-semibold text-sm uppercase">Read More <span className="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span></div>
                             </div>
                         </motion.div>
@@ -189,7 +195,7 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">Big Data and Analytics</h3>
-                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Extracting actionable insights from complex datasets to drive data-informed decisions.</p>
+                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Transforming raw data into strategic intelligence, enabling your leadership to make precision-based, data-driven decisions.</p>
                                 <div className="flex items-center gap-2 text-primary font-semibold text-sm uppercase">Read More <span className="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span></div>
                             </div>
                         </motion.div>
@@ -204,7 +210,7 @@ export default function Home() {
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">AI & Machine Learning</h3>
-                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Implementing intelligent automation and predictive modeling for next-gen operations.</p>
+                                <p className="text-slate-300 text-sm mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Deploying advanced neural networks and predictive analytics to future-proof your workflows and operational efficiency.</p>
                                 <div className="flex items-center gap-2 text-primary font-semibold text-sm uppercase">Read More <span className="material-symbols-outlined text-sm transition-transform duration-300 group-hover:translate-x-2">arrow_forward</span></div>
                             </div>
                         </motion.div>
@@ -227,8 +233,8 @@ export default function Home() {
                             className="bg-primary p-12 rounded shadow-2xl"
                         >
                             <h2 className="text-4xl font-semibold mb-6 leading-tight">Delivering Top-Notch IT Solutions</h2>
-                            <p className="text-white/95 mb-6 text-lg">At Zest Technologies LLC, we pride ourselves on delivering top-notch IT solutions tailored to your unique needs.</p>
-                            <p className="text-white/80 text-sm italic border-l-4 border-white/30 pl-4">"Our dedicated team ensures excellence in every aspect, providing robust and innovative solutions for your business challenges."</p>
+                            <p className="text-white/95 mb-6 text-lg">Zest Technologies LLC is committed to engineering high-caliber IT ecosystems that are precisely calibrated to your specific enterprise demands.</p>
+                            <p className="text-white/80 text-sm italic border-l-4 border-white/30 pl-4">"Our specialist consultants maintain a standard of total excellence, architecting resilient and pioneering solutions for the most complex corporate hurdles."</p>
                         </motion.div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8 lg:mt-0">
                             <motion.div
@@ -240,7 +246,7 @@ export default function Home() {
                             >
                                 <span className="material-symbols-outlined text-primary text-5xl mb-4">language</span>
                                 <h4 className="text-xl font-semibold mb-2">Web Design</h4>
-                                <p className="text-xs text-slate-300">Innovative designs that captivate and engage your audience.</p>
+                                <p className="text-xs text-slate-300">Cutting-edge visual architectures designed to maximize user engagement and brand resonance.</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
@@ -251,7 +257,7 @@ export default function Home() {
                             >
                                 <span className="material-symbols-outlined text-primary text-5xl mb-4">rocket_launch</span>
                                 <h4 className="text-xl font-semibold mb-2">App Development</h4>
-                                <p className="text-xs text-slate-300">Customized applications tailored for seamless experiences.</p>
+                                <p className="text-xs text-slate-300">Custom-built digital platforms engineered for high performance and intuitive user journeys.</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
@@ -262,7 +268,7 @@ export default function Home() {
                             >
                                 <span className="material-symbols-outlined text-primary text-5xl mb-4">cloud_done</span>
                                 <h4 className="text-xl font-semibold mb-2">Cloud Service</h4>
-                                <p className="text-xs text-slate-300">Scalable and secure cloud solutions for efficient operations.</p>
+                                <p className="text-xs text-slate-300">Robust, high-availability cloud infrastructures that empower secure and streamlined global operations.</p>
                             </motion.div>
                             <motion.div
                                 initial={{ opacity: 0, x: 50 }}
@@ -273,7 +279,7 @@ export default function Home() {
                             >
                                 <span className="material-symbols-outlined text-primary text-5xl mb-4">campaign</span>
                                 <h4 className="text-xl font-semibold mb-2">Digital Marketing</h4>
-                                <p className="text-xs text-slate-300">Strategic campaigns that elevate your brand and visibility.</p>
+                                <p className="text-xs text-slate-300">Data-driven marketing strategies that significantly amplify your market presence and brand authority.</p>
                             </motion.div>
                         </div>
                     </div>
@@ -288,7 +294,7 @@ export default function Home() {
                 <div className="container mx-auto px-6 relative z-10 text-center text-white">
                     <h2 className="text-3xl font-semibold mb-4">Industries We Serve</h2>
                     <div className="w-24 h-1 bg-primary mx-auto mb-8"></div>
-                    <p className="max-w-3xl mx-auto text-slate-300 mb-16 text-sm uppercase tracking-wider">Explore opportunities and innovation across sectors. Find your ideal career path with our insights into various industries.</p>
+                    <p className="max-w-3xl mx-auto text-slate-300 mb-16 text-sm uppercase tracking-wider">Investigate emerging trends and innovative breakthroughs across diverse sectors. Leverage our deep industry intelligence to map your professional trajectory.</p>
                 </div>
 
                 <div className="relative w-full overflow-hidden flex z-10 py-4">
@@ -302,22 +308,22 @@ export default function Home() {
                                 <div className="glass-card w-[350px] p-10 rounded text-left text-white border border-white/10 hover:border-primary/50 transition-colors flex-shrink-0">
                                     <div className="text-primary mb-6"><span className="material-symbols-outlined text-5xl">computer</span></div>
                                     <h3 className="text-2xl font-semibold mb-4">IT & Software</h3>
-                                    <p className="text-slate-300 text-sm whitespace-normal">Empowering tech companies with top-tier developers, engineers, and product experts to build scalable solutions.</p>
+                                    <p className="text-slate-300 text-sm whitespace-normal">Fueling technology leaders with elite software architects and product visionaries to build more scalable, resilient platforms.</p>
                                 </div>
                                 <div className="glass-card w-[350px] p-10 rounded text-left text-white border border-white/10 hover:border-primary/50 transition-colors flex-shrink-0">
                                     <div className="text-primary mb-6"><span className="material-symbols-outlined text-5xl">health_and_safety</span></div>
                                     <h3 className="text-2xl font-semibold mb-4">Healthcare</h3>
-                                    <p className="text-slate-300 text-sm whitespace-normal">Providing compliant and secure IT staffing to modernize healthcare and streamline operations.</p>
+                                    <p className="text-slate-300 text-sm whitespace-normal">Delivering fully compliant and hyper-secure technical talent to accelerate digital transformation in modern healthcare.</p>
                                 </div>
                                 <div className="glass-card w-[350px] p-10 rounded text-left text-white border border-white/10 hover:border-primary/50 transition-colors flex-shrink-0">
                                     <div className="text-primary mb-6"><span className="material-symbols-outlined text-5xl">account_balance</span></div>
                                     <h3 className="text-2xl font-semibold mb-4">Finance</h3>
-                                    <p className="text-slate-300 text-sm whitespace-normal">Supplying specialists in fintech, cybersecurity, and data analysis to secure and grow your financial services.</p>
+                                    <p className="text-slate-300 text-sm whitespace-normal">Provisioning specialized experts in fintech architecture and cybersecurity to safeguard and expand your financial infrastructure.</p>
                                 </div>
                                 <div className="glass-card w-[350px] p-10 rounded text-left text-white border border-white/10 hover:border-primary/50 transition-colors flex-shrink-0">
                                     <div className="text-primary mb-6"><span className="material-symbols-outlined text-5xl">rocket_launch</span></div>
                                     <h3 className="text-2xl font-semibold mb-4">Startups & SMBs</h3>
-                                    <p className="text-slate-300 text-sm whitespace-normal">Helping growing businesses scale quickly with flexible, cost-effective staffing and agile technology talent.</p>
+                                    <p className="text-slate-300 text-sm whitespace-normal">Empowering high-growth ventures to expand rapidly through adaptable, budget-conscious talent acquisition and agile technical resources.</p>
                                 </div>
                             </div>
                         ))}
@@ -330,7 +336,7 @@ export default function Home() {
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative z-10">
                         <h2 className="text-4xl font-semibold mb-2">Grow Fast Your Business</h2>
-                        <p className="text-white/80">Have any project in your mind? Feel free to contact with us anytime.</p>
+                        <p className="text-white/80">Planning your next major technical initiative? Our consultants are available for a strategic discovery session today.</p>
                     </div>
                     <Link to="/contact" className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1 block md:inline-block">Contact Now</Link>
                 </div>

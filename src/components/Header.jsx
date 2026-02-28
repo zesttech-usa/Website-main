@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Info, Settings, Users, Menu, Sun, Moon } from "lucide-react"
+import { Info, Settings, Linkedin, Menu, Sun, Moon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -48,17 +48,17 @@ export default function Header() {
             <div className="hidden lg:block bg-navy-950 text-white py-2 text-sm border-b border-white/10 transition-colors">
                 <div className="container mx-auto px-6 flex justify-between items-center">
                     <div className="flex items-center space-x-6">
-                        <a className="flex items-center gap-2 hover:text-primary transition-colors" href="mailto:info@zesttechnologies.com">
-                            <Info size={14} className="text-primary" /> info@zesttechnologies.com
+                        <a className="flex items-center gap-2 hover:text-primary transition-colors" href="mailto:Info@zesttechus.com">
+                            <Info size={14} className="text-primary" /> Info@zesttechus.com
                         </a>
                         <span className="flex items-center gap-2 opacity-80">
-                            <Settings size={14} className="text-primary" /> 10130 Mallard Creek Rd, Suite 300, Charlotte, NC 28262, US
+                            <Settings size={14} className="text-primary" /> 1 Mid America Plaza, 3rd Floor, Suite 300 PMB 7084, Oakbrook Terrace, IL 60181, United States
                         </span>
                     </div>
                     <div className="flex items-center space-x-4">
-                        <Button variant="ghost" size="icon" className="h-6 w-6 text-white hover:text-primary">
-                            <Users size={16} />
-                        </Button>
+                        <a href="https://www.linkedin.com/company/zest-technologies-llc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
+                            <Linkedin size={16} />
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,9 +71,9 @@ export default function Header() {
             )}>
                 <div className="container mx-auto px-6 flex h-14 items-center gap-8">
                     {/* Logo - Stays left */}
-                    <Link to="/" className="flex items-center gap-2 group flex-shrink-0">
-                        <div className="w-10 h-10 bg-primary rounded-xl flex items-center justify-center text-white font-bold text-xl transition-transform group-hover:rotate-6 shadow-lg shadow-primary/20">Z</div>
-                        <span className="text-xl font-bold tracking-tight text-navy-950 dark:text-white hidden sm:block uppercase">Zest Technologies</span>
+                    <Link to="/" className="flex flex-col flex-shrink-0">
+                        <img src="/logo.png" alt="Zest Technologies Logo" className="h-9 w-auto object-contain" />
+                        <span className="text-primary font-bold tracking-[0.2em] text-[8px] uppercase -mt-1 hidden sm:block leading-none">Energy. Expertise. Excellence.</span>
                     </Link>
 
                     {/* Centered Navigation */}
@@ -104,7 +104,7 @@ export default function Header() {
                         </button>
 
                         <div className="hidden sm:flex items-center gap-3">
-                            <Button asChild size="sm" className="bg-primary hover:bg-orange-600 text-white font-semibold text-xs uppercase tracking-wider px-6">
+                            <Button asChild size="sm" className="bg-primary hover:bg-primary-hover text-white font-semibold text-xs uppercase tracking-wider px-6">
                                 <Link to="/careers">Job Openings</Link>
                             </Button>
                         </div>
@@ -133,7 +133,7 @@ export default function Header() {
                                             </div>
                                         ))}
                                         <div className="flex flex-col gap-2 mt-2">
-                                            <Button asChild className="w-full bg-primary hover:bg-orange-600">
+                                            <Button asChild className="w-full bg-primary hover:bg-primary-hover">
                                                 <Link to="/careers">Job Openings</Link>
                                             </Button>
                                         </div>

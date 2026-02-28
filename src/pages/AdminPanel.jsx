@@ -161,7 +161,7 @@ const AdminPanel = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     className="bg-white dark:bg-navy-800 p-8 rounded-3xl shadow-sm border border-slate-200 dark:border-navy-700 w-full max-w-md text-center"
                 >
-                    <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                    <div className="mx-auto w-16 h-16 bg-light-teal rounded-full flex items-center justify-center mb-6">
                         <ShieldCheck className="w-8 h-8 text-primary" />
                     </div>
                     <h1 className="text-2xl font-bold text-navy-900 dark:text-white mb-2">Admin Portal</h1>
@@ -180,7 +180,7 @@ const AdminPanel = () => {
                         </div>
                         <button
                             type="submit"
-                            className="w-full py-3 px-4 bg-navy-900 dark:bg-primary text-white dark:text-white rounded-xl font-medium hover:bg-navy-800 dark:hover:bg-primary/90 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                            className="w-full py-3 px-4 bg-navy-900 dark:bg-primary text-white dark:text-white rounded-xl font-medium hover:bg-navy-800 dark:hover:bg-primary-hover transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                         >
                             Access Dashboard
                         </button>
@@ -366,7 +366,7 @@ const AdminPanel = () => {
                             <button
                                 type="submit"
                                 disabled={submitting}
-                                className="w-full sm:w-auto inline-flex justify-center items-center py-3 px-8 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 disabled:cursor-not-allowed transition-all"
+                                className="w-full sm:w-auto inline-flex justify-center items-center py-3 px-8 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 disabled:cursor-not-allowed transition-all"
                             >
                                 {submitting ? (
                                     <>

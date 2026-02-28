@@ -1,3 +1,5 @@
+import { Linkedin } from 'lucide-react';
+
 export default function Footer() {
     return (
         <>
@@ -5,16 +7,20 @@ export default function Footer() {
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-4 gap-12 mb-16">
                         <div className="space-y-6">
-                            <div className="flex items-center gap-2">
-                                <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-semibold text-xl">Z</div>
-                                <span className="text-2xl font-semibold tracking-tight uppercase">Zest Technologies</span>
+                            <div className="flex flex-col gap-2">
+                                <img src="/logo.png" alt="Zest Technologies Logo" className="h-16 w-auto object-contain" />
+                                <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase">Energy. Expertise. Excellence.</span>
                             </div>
                             <p className="text-slate-400 text-sm leading-relaxed">
-                                Welcome to Zest Technologies LLC, your premier destination for IT staffing and technology solutions. We specialize in providing tailored services to meet your unique business needs.
+                                Zest Technologies LLC is a leading architect of specialized IT staffing and agile technology solutions. We provide high-impact, tailored services designed to synchronize with your strategic organizational objectives.
                             </p>
                             <div className="flex items-center gap-4">
-                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span className="material-symbols-outlined text-sm">share</span></a>
-                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="#"><span className="material-symbols-outlined text-sm">alternate_email</span></a>
+                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="https://www.linkedin.com/company/zest-technologies-llc" target="_blank" rel="noopener noreferrer">
+                                    <Linkedin className="w-5 h-5" />
+                                </a>
+                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="mailto:Info@zesttechus.com">
+                                    <span className="material-symbols-outlined text-sm">alternate_email</span>
+                                </a>
                             </div>
                         </div>
                         <div>
@@ -46,21 +52,21 @@ export default function Footer() {
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">location_on</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Address</h5>
-                                        <p className="text-xs text-slate-400 leading-relaxed">Head Office: 10130 Mallard Creek Rd, Suite 300, Charlotte, NC 28262, US</p>
+                                        <p className="text-xs text-slate-400 leading-relaxed">Head Office: 1 Mid America Plaza, 3rd Floor, Suite 300 PMB 7084, Oakbrook Terrace, IL 60181, United States</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">mail</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Email</h5>
-                                        <p className="text-xs text-slate-400">info@zesttechnologies.com</p>
+                                        <p className="text-xs text-slate-400">Info@zesttechus.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">call</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Call</h5>
-                                        <p className="text-xs text-slate-400">+1 (980) 265-0635</p>
+                                        <p className="text-xs text-slate-400">+1 6304898943</p>
                                     </div>
                                 </div>
                             </div>

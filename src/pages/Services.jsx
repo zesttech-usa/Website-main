@@ -5,42 +5,42 @@ export default function Services() {
     const servicesList = [
         {
             title: "IT Staffing Solutions",
-            desc: "Scalable staffing models to support your internal teams with elite technology professionals that drive your business forward.",
+            desc: "Dynamic resource allocation strategies that fortify your internal teams with premier technical talent, accelerating your strategic growth.",
             icon: "groups"
         },
         {
             title: "Project-Based IT Consulting",
-            desc: "End-to-end strategic planning and technical execution tailored for your most critical and complex business projects.",
+            desc: "Comprehensive project lifecycles, from high-level strategic architecture to specialized technical deployment for your most complex corporate initiatives.",
             icon: "monitoring"
         },
         {
             title: "Technical Recruitment Services",
-            desc: "Connecting you with top-tier technical talent that aligns perfectly with your company culture and project requirements.",
+            desc: "Facilitating high-performance matches between world-class technical specialists and your organization's unique culture and operational needs.",
             icon: "manage_search"
         },
         {
             title: "IT Contract Staffing",
-            desc: "Flexible, on-demand contract staffing solutions designed specifically to meet your short-term and specialized project demands.",
+            desc: "Agile, on-demand technical resources engineered to address your immediate project requirements and specialized short-term surges.",
             icon: "assignment_ind"
         },
         {
             title: "Big Data & Analytics",
-            desc: "Extracting highly actionable insights from complex datasets to drive data-informed decisions and operational efficiency.",
+            desc: "Synthesizing raw data into powerful strategic intelligence, empowering your leadership to make precision-based, data-driven decisions.",
             icon: "insights"
         },
         {
             title: "AI & Machine Learning",
-            desc: "Implementing intelligent automation and predictive modeling to modernize your next-generation operations layer.",
+            desc: "Deploying sophisticated neural networks and predictive analytics to future-proof your workflows and maximize operational throughput.",
             icon: "smart_toy"
         },
         {
             title: "Digital Marketing Services",
-            desc: "Data-driven marketing strategies formulated to aggressively elevate your brand presence and engage your target audience.",
+            desc: "Precision-targeted marketing architectures designed to amplify your market authority and maximize audience resonance through data-driven engagement.",
             icon: "campaign"
         },
         {
             title: "Web & App Development",
-            desc: "Creating robust, scalable, and intuitive digital experiences across web and mobile applications tailored to your business needs.",
+            desc: "Engineering resilient, high-availability digital platforms and intuitive mobile journeys specifically calibrated to your enterprise requirements.",
             icon: "devices"
         }
     ];
@@ -68,9 +68,9 @@ export default function Services() {
                                 Powering Progress <br className="hidden md:block" />Through <span className="text-primary">Technology</span>
                             </h1>
                             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl leading-relaxed">
-                                We provide innovative, secure, and scalable IT services that solve real problems and drive measurable results for your growing business infrastructure.
+                                We deliver pioneering, secure, and elastic IT infrastructures that overcome complex hurdles and generate quantifiable impact for your expanding enterprise.
                             </p>
-                            <button className="bg-primary hover:bg-orange-600 text-white px-10 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/30 hover:-translate-y-1">
+                            <button className="bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/30 hover:-translate-y-1">
                                 Get Started
                             </button>
                         </motion.div>
@@ -87,8 +87,8 @@ export default function Services() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
                             </div>
 
-                            <div className="bg-[#dcf0d6] dark:bg-primary/20 rounded-2xl p-6 flex flex-col justify-center shadow-lg relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-primary/20 rounded-full blur-2xl group-hover:bg-primary/30 transition-colors"></div>
+                            <div className="bg-light-teal dark:bg-primary/20 rounded-2xl p-6 flex flex-col justify-center shadow-lg relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 -mt-10 -mr-10 w-32 h-32 bg-light-teal rounded-full blur-2xl group-hover:bg-primary/30 transition-colors"></div>
                                 <h3 className="text-slate-700 dark:text-slate-300 font-semibold mb-2">Satisfied<br />Customers</h3>
                                 <div className="text-4xl md:text-5xl font-black text-[#001D3D] dark:text-white mb-4">Smart Hiring,</div>
                                 <div className="flex -space-x-3 relative z-10">
@@ -118,8 +118,9 @@ export default function Services() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="max-w-2xl"
                         >
-                            <div className="flex items-center gap-3 mb-4">
+                            <div className="flex flex-col gap-2 mb-4">
                                 <span className="text-primary font-semibold uppercase tracking-widest text-sm">Our Service</span>
+                                <span className="text-primary/70 font-bold tracking-[0.1em] text-xs uppercase">Energy. Expertise. Excellence.</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-semibold leading-tight text-[#001D3D] dark:text-white">
                                 Comprehensive Solutions,<br />All in One Place
@@ -134,7 +135,7 @@ export default function Services() {
                             className="lg:max-w-md border-l-2 border-[#001D3D]/10 dark:border-white/10 pl-6"
                         >
                             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                From cloud infrastructure and cybersecurity to custom software and IT consulting—we deliver end-to-end technology services tailored exactly to your business needs to foster unmatched scale.
+                                From resilient cloud architectures and defensive cybersecurity to bespoke software engineering—we provide comprehensive technical leadership designed to catalyze exponential organizational scale.
                             </p>
                         </motion.div>
                     </div>
@@ -196,7 +197,7 @@ export default function Services() {
                             className="lg:max-w-md border-l-2 border-[#001D3D]/10 dark:border-white/10 pl-6"
                         >
                             <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
-                                We are dedicated to providing the highest quality talent and unparalleled service to ensure your technology initiatives succeed.
+                                We are committed to sourcing exceptional technical intellect and providing a standard of service that ensures the total success of your digital transformation.
                             </p>
                         </motion.div>
                     </div>
@@ -209,10 +210,10 @@ export default function Services() {
                             viewport={{ once: true }}
                             className="bg-white dark:bg-navy-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-navy-800 flex flex-col items-center text-center"
                         >
-                            <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">timer</span></div>
+                            <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">timer</span></div>
                             <h4 className="font-semibold text-xl mb-3 text-[#001D3D] dark:text-white">Fast Turnaround Time</h4>
                             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                We quickly identify and deploy the right professionals so your projects stay on track, minimizing costly delays.
+                                Our agile recruitment protocols enable the rapid deployment of specialized experts, ensuring your high-priority projects remain on schedule.
                             </p>
                         </motion.div>
 
@@ -223,10 +224,10 @@ export default function Services() {
                             viewport={{ once: true }}
                             className="bg-white dark:bg-navy-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-navy-800 flex flex-col items-center text-center"
                         >
-                            <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">verified_user</span></div>
+                            <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">verified_user</span></div>
                             <h4 className="font-semibold text-xl mb-3 text-[#001D3D] dark:text-white">Pre-Screened Candidates</h4>
                             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Every candidate undergoes rigorous technical and cultural vetting to ensure they are the perfect fit for your team.
+                                Each technical specialist is subjected to a deep-dive screening process, evaluating both technical expertise and cultural synergy to guarantee an optimal team fit.
                             </p>
                         </motion.div>
 
@@ -237,10 +238,10 @@ export default function Services() {
                             viewport={{ once: true }}
                             className="bg-white dark:bg-navy-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-navy-800 flex flex-col items-center text-center"
                         >
-                            <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">handshake</span></div>
+                            <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">handshake</span></div>
                             <h4 className="font-semibold text-xl mb-3 text-[#001D3D] dark:text-white">Flexible Hiring Models</h4>
                             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                From contract to full-time placement, we offer adaptable models designed specifically for your organization's budget.
+                                Whether you need transient project support or permanent technical leadership, our engagement models are architected to align with your fiscal strategy.
                             </p>
                         </motion.div>
 
@@ -251,10 +252,10 @@ export default function Services() {
                             viewport={{ once: true }}
                             className="bg-white dark:bg-navy-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-navy-800 flex flex-col items-center text-center"
                         >
-                            <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">support_agent</span></div>
+                            <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">support_agent</span></div>
                             <h4 className="font-semibold text-xl mb-3 text-[#001D3D] dark:text-white">Dedicated Account Support</h4>
                             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                Experience responsive, white-glove service from your personal account manager throughout the entire engagement.
+                                Receive dedicated, high-touch support from a personal account strategist who provides proactive consultation through every phase of our partnership.
                             </p>
                         </motion.div>
                     </div>
@@ -277,7 +278,7 @@ export default function Services() {
                             Ready to Take Your<br />Business to the Next Level with<br />Powerful IT Solutions? <span className="material-symbols-outlined align-middle inline-block rotate-180 text-5xl hidden sm:inline-block">arrow_right_alt</span>
                         </h2>
                         <p className="text-[#001D3D]/80 dark:text-slate-300 md:text-lg mb-10 max-w-xl leading-relaxed">
-                            With years of hands-on experience in cloud architecture, enterprise IT logic, and custom development, we empower businesses to adapt to changing technologies completely seamlessly.
+                            Leveraging deep-domain expertise in cloud engineering, enterprise logic, and bespoke development, we enable organizations to navigate technical shifts with absolute precision and speed.
                         </p>
                         <button className="bg-white text-[#001D3D] px-10 py-5 rounded-full font-semibold shadow-2xl shadow-[#001D3D]/10 hover:shadow-xl hover:scale-105 transition-all">
                             Get a Free Consultation

@@ -86,7 +86,7 @@ const JobDetail = () => {
                 throw new Error(data.message || 'Something went wrong. Please try again.');
             }
 
-            setStatus({ type: 'success', message: 'Application submitted successfully! We will be in touch.' });
+            setStatus({ type: 'success', message: 'Application transmission successful. Our talent specialists will review your credentials and initiate a follow-up protocol.' });
             setFormData({ name: '', email: '', phone: '', coverLetter: '' });
             setResumeFile(null);
             // Reset file input
@@ -105,7 +105,7 @@ const JobDetail = () => {
         return (
             <div className="min-h-screen pt-24 bg-slate-50 dark:bg-navy-900 flex flex-col items-center justify-center text-center px-4">
                 <h2 className="text-3xl font-bold text-navy-900 dark:text-white mb-4">Job Not Found</h2>
-                <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-md">The position you are looking for might have been filled or the link is incorrect.</p>
+                <p className="text-slate-600 dark:text-slate-400 mb-8 max-w-md">The technical position you are seeking may have reached its conclusion or the specific resource identifier is invalid.</p>
                 <Link to="/careers" className="text-primary hover:underline flex items-center gap-2 font-medium">
                     <ChevronLeft className="w-5 h-5" /> Back to Careers
                 </Link>
@@ -125,7 +125,7 @@ const JobDetail = () => {
                 {/* Job Header */}
                 <div className="bg-white dark:bg-navy-800 rounded-3xl p-8 shadow-sm border border-slate-200 dark:border-navy-700 mb-8">
                     <div className="flex flex-wrap items-center gap-3 mb-4">
-                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-primary/10 text-primary">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-light-teal text-primary">
                             {job.department}
                         </span>
                     </div>
@@ -196,7 +196,7 @@ const JobDetail = () => {
                         <div className="bg-white dark:bg-navy-800 rounded-3xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-navy-700 sticky top-28">
                             <h3 className="text-xl font-bold text-navy-900 dark:text-white mb-2">Apply for this position</h3>
                             <p className="text-sm text-slate-500 dark:text-slate-400 mb-6">
-                                Fill out the form below and we'll be in touch shortly.
+                                Complete the submission architecture below; our technical talent strategists will initiate a discovery session shortly.
                             </p>
 
                             <AnimatePresence>
@@ -282,7 +282,7 @@ const JobDetail = () => {
                                     <button
                                         type="submit"
                                         disabled={submitting}
-                                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 disabled:cursor-not-allowed transition-all"
+                                        className="w-full flex justify-center py-3 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-70 disabled:cursor-not-allowed transition-all"
                                     >
                                         {submitting ? (
                                             <span className="flex items-center gap-2">

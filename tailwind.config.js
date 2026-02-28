@@ -12,7 +12,9 @@ export default {
     theme: {
         extend: {
             colors: {
-                primary: "#E67E22",
+                primary: "#008794",
+                "primary-hover": "#006F78",
+                "light-teal": "#E6F6F8",
                 "background-light": "#FFFFFF",
                 "background-dark": "#0F172A",
                 navy: {
@@ -22,8 +24,8 @@ export default {
                 }
             },
             fontFamily: {
-                display: ["Coolvetica", "sans-serif"],
-                body: ["Coolvetica", "sans-serif"],
+                display: ["Montserrat", "sans-serif"],
+                body: ["Lato", "sans-serif"],
             },
             borderRadius: {
                 DEFAULT: "0.5rem",

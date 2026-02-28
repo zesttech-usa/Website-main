@@ -42,7 +42,10 @@ const Careers = () => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl md:text-5xl font-display font-bold text-navy-900 dark:text-white mb-6"
                     >
-                        Join the <span className="text-primary">Zest</span> Team
+                        <div className="flex flex-col gap-3 mb-6">
+                            <span>Join the <span className="text-primary">Zest</span> Team</span>
+                            <span className="text-primary/70 font-bold tracking-[0.2em] text-sm uppercase">Energy. Expertise. Excellence.</span>
+                        </div>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
@@ -50,7 +53,7 @@ const Careers = () => {
                         transition={{ delay: 0.1 }}
                         className="text-xl text-slate-600 dark:text-slate-300"
                     >
-                        Discover your next career move with top-tier IT opportunities.
+                        Explore your next professional milestone within our ecosystem of elite technical opportunities.
                     </motion.p>
                 </div>
 
@@ -112,7 +115,7 @@ const Careers = () => {
                                     {/* Job Info */}
                                     <div className="flex-1">
                                         <div className="flex flex-wrap items-center gap-3 mb-2">
-                                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary">
+                                            <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-light-teal text-primary">
                                                 {job.department}
                                             </span>
                                             {job.featured && (
@@ -149,7 +152,7 @@ const Careers = () => {
                                         </p>
                                         <Link
                                             to={`/careers/${job.id}`}
-                                            className="inline-flex justify-center items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-xl text-white bg-primary hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm hover:shadow transition-all duration-200"
+                                            className="inline-flex justify-center items-center px-6 py-2.5 border border-transparent text-sm font-medium rounded-xl text-white bg-primary hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-primary shadow-sm hover:shadow transition-all duration-200"
                                         >
                                             Apply Now
                                         </Link>

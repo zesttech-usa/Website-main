@@ -61,16 +61,19 @@ export default function About() {
                             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                             viewport={{ once: true, margin: "-50px" }}
                         >
-                            <span className="inline-block bg-primary/10 text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest mb-4">Our Company</span>
+                            <div className="flex flex-col gap-2 mb-4">
+                                <span className="inline-block bg-light-teal text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest self-start">Our Company</span>
+                                <span className="text-primary/80 font-bold tracking-wider text-xs uppercase">Energy. Expertise. Excellence.</span>
+                            </div>
                             <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-tight">Your Success, Our Commitment: <span className="text-primary relative inline-block group">Exceptional Staffing<span className="absolute bottom-0 left-0 w-0 h-1 bg-primary/30 transition-all duration-300 group-hover:w-full"></span></span> & IT Solutions</h2>
                             <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed hover:text-slate-900 dark:hover:text-white transition-colors">
-                                At Zest Technologies LLC, our mission is to empower your success by providing exceptional staffing and IT solutions. With a dedicated team of seasoned professionals, we strive to exceed your expectations and contribute to your growth.
+                                Our mission at Zest Technologies LLC is to catalyze your enterprise success through superior technical staffing and robust IT infrastructures. Driven by a cohort of industry veterans, we are dedicated to surmounting your operational challenges and fueling sustainable expansion.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 mb-8 leading-relaxed hover:text-slate-900 dark:hover:text-white transition-colors">
-                                Our commitment to excellence is evident in every aspect of our work. From understanding your unique requirements to delivering tailored solutions that fit perfectly. We take the time to understand your business and its specific requirements before crafting solutions that align with your goals.
+                                An uncompromising commitment to quality defines our operational DNA. We invest significant resources into diagnosing your organizational needs, ensuring every solution we engineer is a precision fit for your technical ecosystem and overarching business strategy.
                             </p>
                             <p className="text-slate-600 dark:text-slate-400 mb-8 font-semibold leading-relaxed shadow-sm border-l-4 border-primary pl-6 hover:text-slate-900 dark:hover:text-white transition-colors">
-                                Trust Zest Technologies LLC to be your reliable partner in success, providing innovative and customized solutions that propel your business forward.
+                                Partner with Zest Technologies LLC for dependable, high-impact technical leadership, delivering pioneering and bespoke solutions that accelerate your path to market dominance.
                             </p>
                         </motion.div>
                     </div>
@@ -87,7 +90,10 @@ export default function About() {
                             transition={{ duration: 0.8 }}
                             viewport={{ once: true, margin: "-50px" }}
                         >
-                            <span className="inline-block bg-primary text-white px-6 py-2 text-xs font-semibold uppercase tracking-widest mb-6 -ml-2 skew-x-[-15deg]"><span className="inline-block skew-x-[15deg]">Welcome to Zest Technologies</span></span>
+                            <div className="flex flex-col gap-4 mb-6">
+                                <span className="inline-block bg-primary text-white px-6 py-2 text-xs font-semibold uppercase tracking-widest -ml-2 skew-x-[-15deg] self-start"><span className="inline-block skew-x-[15deg]">Welcome to Zest Technologies</span></span>
+                                <span className="text-primary font-bold tracking-[0.15em] text-sm uppercase">Energy. Expertise. Excellence.</span>
+                            </div>
                             <h2 className="text-4xl md:text-5xl font-semibold mb-10 leading-tight">Experienced <span className="text-primary">designers & developers</span></h2>
 
                             <div className="space-y-10">
@@ -98,12 +104,12 @@ export default function About() {
                                     viewport={{ once: true }}
                                     className="flex gap-6 group"
                                 >
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-light-teal text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined font-semibold">check</span>
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Best user interfaces</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Modern, efficient, and visually appealing designs that maximize user retention and engagement.</p>
+                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Next-generation, high-performance interfaces engineered to captivate users and drive sustained platform interaction.</p>
                                     </div>
                                 </motion.div>
 
@@ -114,12 +120,12 @@ export default function About() {
                                     viewport={{ once: true }}
                                     className="flex gap-6 group"
                                 >
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-light-teal text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined font-semibold">check</span>
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Smooth development</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Streamlined workflows, cleaner code styling, and robust architecture to perform at scale.</p>
+                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Optimized development lifecycles and resilient system architectures built to maintain peak performance under enterprise-level loads.</p>
                                     </div>
                                 </motion.div>
 
@@ -130,12 +136,12 @@ export default function About() {
                                     viewport={{ once: true }}
                                     className="flex gap-6 group"
                                 >
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-light-teal text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                                         <span className="material-symbols-outlined font-semibold">check</span>
                                     </div>
                                     <div>
                                         <h4 className="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Quality web design</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Engaging, accessible, and fast-loading web apps pushing technical boundaries completely.</p>
+                                        <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">High-speed, inclusive, and immersive digital platforms that redefine the boundaries of modern web engineering.</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -182,10 +188,10 @@ export default function About() {
                                 viewport={{ once: true }}
                                 className="bg-white dark:bg-navy-800 p-8 rounded shadow-lg border-t-4 border-primary hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
                             >
-                                <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">timer</span></div>
+                                <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">timer</span></div>
                                 <h4 className="font-semibold text-xl mb-3">Fast Turnaround Time</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                    We quickly identify and deploy the right professionals so your projects stay on track, minimizing costly delays.
+                                    Our rapid-response recruitment engine ensures the immediate deployment of top-tier talent, keeping your mission-critical initiatives on schedule and within budget.
                                 </p>
                             </motion.div>
 
@@ -196,10 +202,10 @@ export default function About() {
                                 viewport={{ once: true }}
                                 className="bg-white dark:bg-navy-800 p-8 rounded shadow-lg border-t-4 border-primary hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
                             >
-                                <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">verified_user</span></div>
+                                <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">verified_user</span></div>
                                 <h4 className="font-semibold text-xl mb-3">Pre-Screened Candidates</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                    Every candidate undergoes rigorous technical and cultural vetting to ensure they are the perfect fit for your team.
+                                    We implement a high-intensity screening protocol, evaluating both technical mastery and cultural alignment to guarantee a seamless integration into your workforce.
                                 </p>
                             </motion.div>
 
@@ -210,10 +216,10 @@ export default function About() {
                                 viewport={{ once: true }}
                                 className="bg-white dark:bg-navy-800 p-8 rounded shadow-lg border-t-4 border-primary hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
                             >
-                                <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">handshake</span></div>
+                                <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">handshake</span></div>
                                 <h4 className="font-semibold text-xl mb-3">Flexible Hiring Models</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                    From contract to full-time placement, we offer adaptable models designed specifically for your organization's budget.
+                                    Whether you require temporary project-based expertise or long-term leadership, our engagement models are architected to scale with your fiscal and operational requirements.
                                 </p>
                             </motion.div>
 
@@ -224,10 +230,10 @@ export default function About() {
                                 viewport={{ once: true }}
                                 className="bg-white dark:bg-navy-800 p-8 rounded shadow-lg border-t-4 border-primary hover:-translate-y-2 transition-transform duration-300 flex flex-col items-center text-center"
                             >
-                                <div className="text-primary mb-4 flex items-center justify-center bg-primary/10 w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">support_agent</span></div>
+                                <div className="text-primary mb-4 flex items-center justify-center bg-light-teal w-16 h-16 rounded-full"><span className="material-symbols-outlined text-3xl">support_agent</span></div>
                                 <h4 className="font-semibold text-xl mb-3">Dedicated Account Support</h4>
                                 <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-                                    Experience responsive, white-glove service from your personal account manager throughout the entire engagement.
+                                    Benefit from dedicated, high-touch consultation with a personal account strategist who provides proactive support throughout every stage of our partnership.
                                 </p>
                             </motion.div>
                         </div>
@@ -247,7 +253,7 @@ export default function About() {
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative z-10">
                         <h2 className="text-4xl font-semibold mb-2">Grow Fast Your Business</h2>
-                        <p className="text-white/80">Have any project in your mind? Feel free to contact with us anytime.</p>
+                        <p className="text-white/80">Ready to scale your technical infrastructure? Contact our consulting team for a specialized architectural review.</p>
                     </div>
                     <button className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">Contact Now</button>
                 </motion.div>

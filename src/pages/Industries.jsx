@@ -50,7 +50,7 @@ export default function Industries() {
                         </div>
                         <h1 className="text-5xl md:text-7xl font-semibold text-white mb-6 leading-tight">Navigating Diverse <br /><span className="text-primary">Industries</span></h1>
                         <div className="w-24 h-1 bg-primary mx-auto mb-6"></div>
-                        <p className="max-w-2xl mx-auto text-slate-300 text-lg">Explore opportunities and innovation across global sectors. Find your ideal technological path with our targeted insights.</p>
+                        <p className="max-w-2xl mx-auto text-slate-300 text-lg">Explore emerging digital paradigms and strategic innovations across global markets. Leverage our proprietary industry intelligence to define your technological future.</p>
                     </motion.div>
                 </div>
             </section>
@@ -69,7 +69,7 @@ export default function Industries() {
                                 className="lg:w-1/2 w-full relative group"
                             >
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]">
-                                    <div className="absolute inset-0 bg-primary/20 mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500"></div>
+                                    <div className="absolute inset-0 bg-light-teal mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500"></div>
                                     <img src={ind.image} alt={ind.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 </div>
                                 {/* Floating Icon Decoration */}
@@ -86,14 +86,17 @@ export default function Industries() {
                                 viewport={{ once: true, margin: "-50px" }}
                                 className="lg:w-1/2 w-full"
                             >
-                                <span className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 border border-primary/20">
-                                    Sector Focus
-                                </span>
+                                <div className="flex flex-col gap-2 mb-6">
+                                    <span className="inline-block bg-light-teal text-primary px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest border border-primary/20 self-start">
+                                        Sector Focus
+                                    </span>
+                                    <span className="text-primary/70 font-bold tracking-[0.1em] text-xs uppercase">Energy. Expertise. Excellence.</span>
+                                </div>
                                 <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-tight text-[#001D3D] dark:text-white">
                                     {ind.title}
                                 </h2>
                                 <p className="text-slate-600 dark:text-slate-400 mb-10 text-lg leading-relaxed border-l-4 border-slate-200 dark:border-navy-800 pl-6">
-                                    We specialize in crafting dedicated IT frameworks and deploying elite talent purposefully built for the complexities of the {ind.title.toLowerCase()} sector.
+                                    We specialize in architecting high-performance IT ecosystems and deploying specialized technical leadership engineered specifically to navigate the intricate demands of the {ind.title.toLowerCase()} landscape.
                                 </p>
 
                                 <div className="grid sm:grid-cols-2 gap-y-6 gap-x-8">
@@ -106,7 +109,7 @@ export default function Industries() {
                                             viewport={{ once: true }}
                                             className="flex items-center gap-3 group/item border border-slate-100 dark:border-navy-800 p-4 rounded-lg bg-slate-50 dark:bg-navy-950/50 hover:bg-white dark:hover:bg-navy-800 hover:shadow-md transition-all cursor-default"
                                         >
-                                            <div className="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                                            <div className="w-8 h-8 rounded-full bg-light-teal text-primary flex items-center justify-center group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                                                 <span className="material-symbols-outlined text-sm font-semibold">arrow_forward</span>
                                             </div>
                                             <span className="font-semibold text-sm text-[#001D3D] dark:text-white group-hover/item:text-primary transition-colors">{item}</span>
@@ -131,7 +134,7 @@ export default function Industries() {
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative z-10">
                         <h2 className="text-4xl font-semibold mb-2">Drive Innovation Today</h2>
-                        <p className="text-white/80">Require IT consulting specialized for your specific industry sector?</p>
+                        <p className="text-white/80">Do you require expert-level IT consultation tailored to the unique regulatory and operational requirements of your industry?</p>
                     </div>
                     <button className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">Get Started</button>
                 </motion.div>

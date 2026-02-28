@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer base {
-    h1, h2, h3, h4, h5, h6, .font-display {
-        font-family: 'Coolvetica', sans-serif;
-        font-weight: 500 !important;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-display {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600 !important;
     }
 }
 
@@ -65,3 +72,5 @@
 .hero-slide:nth-child(3) {
     animation-delay: 10s;
 }
+
+/* force rebuild */
