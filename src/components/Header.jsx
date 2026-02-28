@@ -1,7 +1,7 @@
 import * as React from "react"
 import { useState, useEffect } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Info, Settings, Linkedin, Menu, Sun, Moon } from "lucide-react"
+import { Menu, Sun, Moon } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -45,24 +45,6 @@ export default function Header() {
 
     return (
         <>
-            <div className="hidden lg:block bg-navy-950 text-white py-2 text-sm border-b border-white/10 transition-colors">
-                <div className="container mx-auto px-6 flex justify-between items-center">
-                    <div className="flex items-center space-x-6">
-                        <a className="flex items-center gap-2 hover:text-primary transition-colors" href="mailto:Info@zesttechus.com">
-                            <Info size={14} className="text-primary" /> Info@zesttechus.com
-                        </a>
-                        <span className="flex items-center gap-2 opacity-80">
-                            <Settings size={14} className="text-primary" /> 1 Mid America Plaza, 3rd Floor, Suite 300 PMB 7084, Oakbrook Terrace, IL 60181, United States
-                        </span>
-                    </div>
-                    <div className="flex items-center space-x-4">
-                        <a href="https://www.linkedin.com/company/zest-technologies-llc" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors">
-                            <Linkedin size={16} />
-                        </a>
-                    </div>
-                </div>
-            </div>
-
             <header className={cn(
                 "sticky top-0 z-50 w-full transition-all duration-300 border-b",
                 isScrolled
