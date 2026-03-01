@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Appointment() {
     return (
         <>
+            <SEO
+                title="Book a Discovery Call"
+                description="Schedule a 30-minute strategic consultation with Zest Technologies technical specialists to discuss your IT staffing and architecture requirements."
+                url="/appointment"
+            />
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[300px] flex items-center overflow-hidden bg-navy-950">
                 <div className="absolute inset-0 z-0">

@@ -1,0 +1,10 @@
+
+> website@0.0.0 lint
+> eslint .
+
+
+D:\zilaxis\Zest technologies\Website\src\pages\Careers.jsx
+  2:8  error  Parsing error: Identifier 'React' has already been declared
+
+✖ 1 problem (1 error, 0 warnings)
+

@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function About() {
     return (
         <>
+            <SEO
+                title="About Us"
+                description="Learn about Zest Technologies LLC, our mission to catalyze your enterprise success through superior technical staffing and robust IT infrastructures."
+                url="/about"
+            />
             {/* Mini Hero */}
             <section className="relative h-[40vh] min-h-[300px] flex items-center overflow-hidden bg-navy-950">
                 <div className="absolute inset-0 z-0">
@@ -38,10 +44,10 @@ export default function About() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="grid grid-cols-2 gap-2 md:gap-4 relative group/grid"
                         >
-                            <div className="overflow-hidden rounded shadow-lg"><img alt="Team collaborating" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg mt-4 md:mt-8"><img alt="Workplace" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg -mt-4 md:-mt-8"><img alt="Tech office" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg"><img alt="Meeting" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg"><img alt="Team collaborating" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg mt-4 md:mt-8"><img alt="Workplace" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg -mt-4 md:-mt-8"><img alt="Tech office" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg"><img alt="Meeting" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" /></div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
@@ -142,7 +148,7 @@ export default function About() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="relative rounded-2xl overflow-hidden shadow-2xl h-[500px]"
                         >
-                            <img alt="Team members" className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" />
+                            <img alt="Team members" loading="lazy" className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" />
                         </motion.div>
                     </div>
                 </div>

@@ -1,0 +1,75 @@
+
+> website@0.0.0 lint
+> eslint .
+
+
+D:\zilaxis\Zest technologies\Website\api\apply.js
+  22:54  error  'process' is not defined  no-undef
+
+D:\zilaxis\Zest technologies\Website\api\manage-jobs.js
+   8:45  error  'process' is not defined  no-undef
+  18:26  error  'process' is not defined  no-undef
+  19:26  error  'process' is not defined  no-undef
+  19:63  error  'process' is not defined  no-undef
+  20:25  error  'process' is not defined  no-undef
+  20:61  error  'process' is not defined  no-undef
+  52:32  error  'Buffer' is not defined   no-undef
+  82:32  error  'Buffer' is not defined   no-undef
+
+D:\zilaxis\Zest technologies\Website\src\components\ui\badge.jsx
+  27:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\zilaxis\Zest technologies\Website\src\components\ui\button.jsx
+  50:18  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\zilaxis\Zest technologies\Website\src\components\ui\navigation-menu.jsx
+  101:5  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+D:\zilaxis\Zest technologies\Website\src\pages\About.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\AdminPanel.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  17:9   error  Duplicate key 'location'                                                       no-dupe-keys
+
+D:\zilaxis\Zest technologies\Website\src\pages\Appointment.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\Careers.jsx
+   2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      no-unused-vars
+  17:9   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  15 |         // Attempting to load jobs from imported JSON.
+  16 |         // In a real Vercel app, this works because the JSON is bundled.
+> 17 |         setJobs(jobsData || []);
+     |         ^^^^^^^ Avoid calling setState() directly within an effect
+  18 |     }, []);
+  19 |
+  20 |     const filteredJobs = jobs  react-hooks/set-state-in-effect
+
+D:\zilaxis\Zest technologies\Website\src\pages\Contact.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\Home.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\Industries.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\JobDetail.jsx
+  3:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\Jobseekers.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+D:\zilaxis\Zest technologies\Website\src\pages\Services.jsx
+  1:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 24 problems (24 errors, 0 warnings)
+

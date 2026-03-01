@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { Briefcase, Target, TrendingUp, Users } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Jobseekers() {
 
@@ -8,6 +9,11 @@ export default function Jobseekers() {
 
     return (
         <div className="bg-slate-50 dark:bg-navy-950">
+            <SEO
+                title="For Jobseekers"
+                description="Elevate your career with Zest Technologies. Connect with high-impact opportunities at global enterprises and fast-track your IT placement."
+                url="/jobseekers"
+            />
             {/* Hero Section */}
             <section className="relative pt-32 pb-24 overflow-hidden bg-navy-950 text-white">
                 <div className="absolute inset-0 z-0">

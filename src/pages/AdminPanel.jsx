@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ShieldCheck, PlusCircle, CheckCircle, AlertCircle, RefreshCw, Trash2 } from 'lucide-react';
 import jobsData from '../data/jobs.json';
+import SEO from '../components/SEO';
 
 const AdminPanel = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -12,7 +13,6 @@ const AdminPanel = () => {
     const [formData, setFormData] = useState({
         title: '',
         department: '',
-        location: '',
         location: '',
         type: 'Full-time',
         currency: '$',
@@ -156,6 +156,7 @@ const AdminPanel = () => {
     if (!isAuthenticated) {
         return (
             <div className="min-h-screen pt-24 pb-16 bg-slate-50 dark:bg-navy-900 flex flex-col items-center justify-center px-4">
+                <SEO noindex={true} title="Admin Portal" description="Zest Technologies Administration Log In" />
                 <motion.div
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
@@ -192,11 +193,12 @@ const AdminPanel = () => {
 
     return (
         <div className="min-h-screen pt-24 pb-16 bg-slate-50 dark:bg-navy-900">
+            <SEO noindex={true} title="Admin Portal - Dashboard" />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="flex items-center justify-between mb-8">
                     <div>
-                        <h1 className="text-3xl font-display font-bold text-navy-900 dark:text-white">Job Publisher</h1>
+                        <h2 className="text-3xl font-display font-bold text-navy-900 dark:text-white">Job Publisher</h2>
                         <p className="text-slate-500 dark:text-slate-400 mt-1">Publish new roles directly to the portal.</p>
                     </div>
                     <button

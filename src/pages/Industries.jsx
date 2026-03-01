@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Industries() {
     const industries = [
@@ -31,6 +32,11 @@ export default function Industries() {
 
     return (
         <>
+            <SEO
+                title="Industries We Serve"
+                description="Explore the diverse industries Zest Technologies provides IT staffing and consulting for, including Banking, Healthcare, Manufacturing, and Insurance."
+                url="/industries"
+            />
             {/* Hero Section */}
             <section className="relative h-[50vh] min-h-[400px] flex items-center overflow-hidden bg-navy-950">
                 <div className="absolute inset-0 z-0">
@@ -70,7 +76,7 @@ export default function Industries() {
                             >
                                 <div className="relative rounded-2xl overflow-hidden shadow-2xl h-[400px]">
                                     <div className="absolute inset-0 bg-light-teal mix-blend-multiply z-10 group-hover:bg-transparent transition-colors duration-500"></div>
-                                    <img src={ind.image} alt={ind.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                                    <img src={ind.image} loading="lazy" alt={ind.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                                 </div>
                                 {/* Floating Icon Decoration */}
                                 <div className={`absolute top-10 ${index % 2 !== 0 ? '-left-8' : '-right-8'} bg-white dark:bg-navy-950 p-6 rounded-xl shadow-xl z-20 flex hidden md:flex items-center justify-center text-primary group-hover:-translate-y-4 group-hover:shadow-primary/20 transition-all duration-500`}>

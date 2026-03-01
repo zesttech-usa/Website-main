@@ -8,7 +8,7 @@ export default function Footer() {
                     <div className="grid md:grid-cols-4 gap-12 mb-16">
                         <div className="space-y-6">
                             <div className="flex flex-col gap-2">
-                                <img src="/logo.png" alt="Zest Technologies Logo" className="h-16 w-auto object-contain" />
+                                <img src="/logo.png" loading="lazy" alt="Zest Technologies Logo" className="h-16 w-auto object-contain" />
                                 <span className="text-primary font-bold tracking-[0.2em] text-[10px] uppercase">Energy. Expertise. Excellence.</span>
                             </div>
                             <p className="text-slate-400 text-sm leading-relaxed">
@@ -73,7 +73,12 @@ export default function Footer() {
                         </div>
                     </div>
                     <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-                        <p>© 2024 ZEST TECHNOLOGIES LLC All Rights Reserved.</p>
+                        <div className="flex flex-col gap-1 text-center md:text-left">
+                            <p>© 2026 ZEST TECHNOLOGIES LLC All Rights Reserved.</p>
+                            <p className="opacity-80">
+                                Website Powered by <a href="https://zilaxis.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline transition-all">zilaxis.com</a>
+                            </p>
+                        </div>
                         <div className="flex gap-6 mt-4 md:mt-0">
                             <a className="hover:text-primary" href="/contact">Privacy Policy</a>
                             <a className="hover:text-primary" href="/contact">Terms of Use</a>

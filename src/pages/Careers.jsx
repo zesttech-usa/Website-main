@@ -1,20 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Briefcase, MapPin, Clock, Search, Filter } from 'lucide-react';
 import jobsData from '../data/jobs.json';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion'; // Keep motion as it's used
 
 const Careers = () => {
-    const [jobs, setJobs] = useState([]);
+    const [jobs] = useState(jobsData || []);
     const [searchTerm, setSearchTerm] = useState('');
     const [filterType, setFilterType] = useState('All');
     const [sortBy, setSortBy] = useState('Newest');
-
-    useEffect(() => {
-        // Attempting to load jobs from imported JSON.
-        // In a real Vercel app, this works because the JSON is bundled.
-        setJobs(jobsData || []);
-    }, []);
 
     const filteredJobs = jobs
         .filter(job => {
@@ -33,6 +28,11 @@ const Careers = () => {
 
     return (
         <div className="pt-24 pb-16 min-h-screen bg-slate-50 dark:bg-navy-900">
+            <SEO
+                title="Careers"
+                description="Join the Zest Technologies team. Explore your next professional milestone within our ecosystem of elite technical opportunities."
+                url="/careers"
+            />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 {/* Header Section */}

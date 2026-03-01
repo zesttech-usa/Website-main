@@ -1,9 +1,38 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Home() {
+    const organizationSchema = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Zest Technologies LLC",
+        "url": "https://zesttech.com",
+        "logo": "https://zesttech.com/images/default-logo.png",
+        "description": "Zest Technologies provides premium IT solutions, staffing, and technical expertise.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 Mid America Plaza Suite 300 PMB 7084",
+            "addressLocality": "Oakbrook Terrace",
+            "addressRegion": "IL",
+            "postalCode": "60181",
+            "addressCountry": "US"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1 6304898943",
+            "contactType": "customer service"
+        }
+    };
+
     return (
         <>
+            <SEO
+                title="Home"
+                description="Zest Technologies LLC provides expert IT staffing solutions, project-based IT consulting, big data and analytics, and AI/ML services."
+                url="/"
+                schema={organizationSchema}
+            />
             <section className="relative h-[85vh] flex items-center overflow-hidden bg-navy-950">
                 <div className="absolute inset-0 z-0">
                     <div className="hero-slide">
@@ -96,10 +125,10 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="grid grid-cols-2 gap-2 md:gap-4 relative group/grid"
                         >
-                            <div className="overflow-hidden rounded shadow-lg"><img alt="Team collaborating" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg mt-4 md:mt-8"><img alt="Workplace" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg -mt-4 md:-mt-8"><img alt="Tech office" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" /></div>
-                            <div className="overflow-hidden rounded shadow-lg"><img alt="Meeting" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg"><img alt="Team collaborating" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg mt-4 md:mt-8"><img alt="Workplace" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg -mt-4 md:-mt-8"><img alt="Tech office" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" /></div>
+                            <div className="overflow-hidden rounded shadow-lg"><img alt="Meeting" loading="lazy" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" /></div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
@@ -150,7 +179,7 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="relative overflow-hidden group rounded-xl shadow-lg h-[400px] cursor-pointer hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 block"
                         >
-                            <img alt="IT Staffing" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" />
+                            <img alt="IT Staffing" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">IT Staffing Solutions</h3>
@@ -166,7 +195,7 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="relative overflow-hidden group rounded-xl shadow-lg h-[400px] cursor-pointer hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 block"
                         >
-                            <img alt="IT Consulting" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" />
+                            <img alt="IT Consulting" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">Project-Based IT Consulting</h3>
@@ -182,7 +211,7 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="relative overflow-hidden group rounded-xl shadow-lg h-[400px] cursor-pointer hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 block"
                         >
-                            <img alt="Big Data" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" />
+                            <img alt="Big Data" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">Big Data and Analytics</h3>
@@ -198,7 +227,7 @@ export default function Home() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="relative overflow-hidden group rounded-xl shadow-lg h-[400px] cursor-pointer hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 block"
                         >
-                            <img alt="AI & ML" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" />
+                            <img alt="AI & ML" loading="lazy" className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" />
                             <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent group-hover:via-navy-950/60 transition-colors duration-500"></div>
                             <div className="absolute bottom-0 left-0 p-6 w-full transform translate-y-12 group-hover:translate-y-0 transition-transform duration-500 ease-out">
                                 <h3 className="text-xl font-semibold mb-3 text-white transition-colors duration-300 group-hover:text-primary">AI & Machine Learning</h3>
@@ -212,7 +241,7 @@ export default function Home() {
 
             <section className="relative py-24 text-white">
                 <div className="absolute inset-0 z-0">
-                    <img alt="Modern technical infrastructure" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80" />
+                    <img alt="Modern technical infrastructure" loading="lazy" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80" />
                     <div className="absolute inset-0 bg-[#001D3D]/85 backdrop-blur-[2px]"></div>
                 </div>
                 <div className="container mx-auto px-6 relative z-10">
@@ -280,7 +309,7 @@ export default function Home() {
 
             <section className="py-24 relative overflow-hidden">
                 <div className="absolute inset-0">
-                    <img alt="Industries background" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" />
+                    <img alt="Industries background" loading="lazy" className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80" />
                     <div className="absolute inset-0 bg-navy-950/90"></div>
                 </div>
                 <div className="container mx-auto px-6 relative z-10 text-center text-white">

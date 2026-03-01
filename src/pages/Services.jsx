@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Services() {
     const servicesList = [
@@ -47,6 +48,11 @@ export default function Services() {
 
     return (
         <>
+            <SEO
+                title="Our Services"
+                description="Discover Zest Technologies' comprehensive IT services: Staffing, Project Consulting, Recruitment, Big Data, AI/ML, Digital Marketing, and Development."
+                url="/services"
+            />
             {/* Hero Section */}
             <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-slate-50 dark:bg-navy-900 border-b border-slate-200 dark:border-navy-800">
                 <div className="container mx-auto px-6 relative z-10">
@@ -83,7 +89,7 @@ export default function Services() {
                             className="lg:w-1/2 w-full grid grid-cols-2 gap-4"
                         >
                             <div className="row-span-2 overflow-hidden rounded-2xl shadow-lg relative group h-full min-h-[250px] lg:min-h-full">
-                                <img alt="Office discussion" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" />
+                                <img alt="Office discussion" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80" />
                                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/60 to-transparent"></div>
                             </div>
 
@@ -92,15 +98,15 @@ export default function Services() {
                                 <h3 className="text-slate-700 dark:text-slate-300 font-semibold mb-2">Satisfied<br />Customers</h3>
                                 <div className="text-4xl md:text-5xl font-black text-[#001D3D] dark:text-white mb-4">Smart Hiring,</div>
                                 <div className="flex -space-x-3 relative z-10">
-                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" src="https://ui-avatars.com/api/?name=J+D&background=random" alt="User 1" />
-                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" src="https://ui-avatars.com/api/?name=S+R&background=random" alt="User 2" />
-                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" src="https://ui-avatars.com/api/?name=E+K&background=random" alt="User 3" />
+                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" loading="lazy" src="https://ui-avatars.com/api/?name=J+D&background=random" alt="User 1" />
+                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" loading="lazy" src="https://ui-avatars.com/api/?name=S+R&background=random" alt="User 2" />
+                                    <img className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm" loading="lazy" src="https://ui-avatars.com/api/?name=E+K&background=random" alt="User 3" />
                                     <div className="w-10 h-10 rounded-full border-2 border-white dark:border-navy-900 shadow-sm bg-navy-950 text-white flex justify-center items-center text-xs font-semibold">+</div>
                                 </div>
                             </div>
 
                             <div className="overflow-hidden rounded-2xl shadow-lg relative group h-[150px] lg:h-[200px]">
-                                <img alt="Data Center" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" />
+                                <img alt="Data Center" loading="lazy" className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" />
                             </div>
                         </motion.div>
                     </div>

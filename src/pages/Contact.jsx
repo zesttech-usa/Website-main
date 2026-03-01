@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 export default function Contact() {
     return (
         <>
+            <SEO
+                title="Contact Us"
+                description="Get in touch with Zest Technologies LLC. We are ready to start your next premium technical staffing, software architecture, or enterprise project."
+                url="/contact"
+            />
             {/* Hero Section */}
             <section className="relative h-[40vh] min-h-[300px] flex items-center overflow-hidden bg-navy-950">
                 <div className="absolute inset-0 z-0">

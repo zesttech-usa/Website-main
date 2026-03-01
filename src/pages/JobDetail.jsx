@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, MapPin, Briefcase, Clock, DollarSign, UploadCloud, CheckCircle, AlertCircle } from 'lucide-react';
 import jobsData from '../data/jobs.json';
+import SEO from '../components/SEO';
 
 const JobDetail = () => {
     const { id } = useParams();
@@ -113,8 +114,50 @@ const JobDetail = () => {
         );
     }
 
+    // Build JobPosting schema dynamically based on job data
+    const jobSchema = job ? {
+        "@context": "https://schema.org/",
+        "@type": "JobPosting",
+        "title": job.title,
+        "description": job.description || 'Premium technical role at Zest Technologies',
+        "datePosted": job.createdAt || new Date().toISOString().split('T')[0],
+        "validThrough": new Date(new Date().setMonth(new Date().getMonth() + 1)).toISOString().split('T')[0],
+        "employmentType": job.type === 'Full-time' ? 'FULL_TIME' : job.type === 'Part-time' ? 'PART_TIME' : job.type === 'Contract' ? 'CONTRACTOR' : 'OTHER',
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "Zest Technologies LLC",
+            "sameAs": "https://zesttech.com",
+            "logo": "https://zesttech.com/images/default-logo.png"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": job.location.includes(',') ? job.location.split(',')[0].trim() : job.location,
+                "addressRegion": job.location.includes(',') ? job.location.split(',')[1].trim() : "",
+                "addressCountry": "US"
+            }
+        },
+        "baseSalary": job.salaryRange ? {
+            "@type": "MonetaryAmount",
+            "currency": job.currency || "USD",
+            "value": {
+                "@type": "QuantitativeValue",
+                "value": job.salaryRange,
+                "unitText": "YEAR"
+            }
+        } : undefined
+    } : null;
+
     return (
         <div className="pt-24 pb-16 min-h-screen bg-slate-50 dark:bg-navy-900">
+            <SEO
+                title={`${job.title} - Careers`}
+                description={`Apply for the ${job.title} position in ${job.location} at Zest Technologies.`}
+                url={`/careers/${job.id}`}
+                type="article"
+                schema={jobSchema}
+            />
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <Link to="/careers" className="inline-flex items-center text-sm font-medium text-slate-500 hover:text-primary dark:text-slate-400 dark:hover:text-primary mb-8 transition-colors">
