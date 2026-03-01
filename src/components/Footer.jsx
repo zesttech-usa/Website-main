@@ -59,7 +59,7 @@ export default function Footer() {
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">mail</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Email</h5>
-                                        <p className="text-xs text-slate-400">hr@zesttechus.com</p>
+                                        <p className="text-xs text-slate-400">hr@zesttechusa.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
