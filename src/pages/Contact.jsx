@@ -108,7 +108,7 @@ export default function Contact() {
                                 className="mb-8"
                             >
                                 <Link
-                                    to="/appointment"
+                                    to="/jobseekers#book-call"
                                     className="w-full bg-light-teal dark:bg-primary/20 text-primary font-bold py-6 rounded-2xl border-2 border-dashed border-primary/30 flex items-center justify-center gap-4 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/30 transition-all group shadow-sm"
                                 >
                                     <span className="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">event_available</span>
