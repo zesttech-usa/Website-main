@@ -53,9 +53,9 @@ export default function Header() {
             )}>
                 <div className="container mx-auto px-6 flex h-14 items-center gap-8">
                     {/* Logo - Stays left */}
-                    <Link to="/" className="flex flex-col flex-shrink-0">
-                        <img src="/logo.png" alt="Zest Technologies Logo" className="h-9 w-auto object-contain" />
-                        <span className="text-primary font-bold tracking-[0.2em] text-[8px] uppercase -mt-1 hidden sm:block leading-none">Energy. Expertise. Excellence.</span>
+                    <Link to="/" className="flex flex-col items-center flex-shrink-0">
+                        <img src="/logo.png" alt="Zest Technologies Logo" className="h-8 w-auto object-contain" />
+                        <span className="text-primary font-bold tracking-[0.2em] text-[7px] uppercase hidden sm:block leading-none mt-1">Energy. Expertise. Excellence.</span>
                     </Link>
 
                     {/* Centered Navigation */}

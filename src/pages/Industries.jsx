@@ -136,7 +136,7 @@ export default function Industries() {
                         <h2 className="text-4xl font-semibold mb-2">Drive Innovation Today</h2>
                         <p className="text-white/80">Do you require expert-level IT consultation tailored to the unique regulatory and operational requirements of your industry?</p>
                     </div>
-                    <button className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">Get Started</button>
+                    <Link to="/contact" className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1 block md:inline-block text-center">Get Started</Link>
                 </motion.div>
             </section>
         </>

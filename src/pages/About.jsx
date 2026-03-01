@@ -28,9 +28,7 @@ export default function About() {
 
             {/* Our Company Section - Using Home Grid Component */}
             <section className="py-24 relative overflow-hidden bg-white dark:bg-navy-900">
-                <div className="absolute right-0 top-0 bottom-0 pointer-events-none select-none opacity-[0.03] dark:opacity-[0.05]">
-                    <span className="text-vertical text-[6rem] md:text-[12rem] font-black uppercase tracking-[1rem] md:tracking-[2rem]">AGENCY</span>
-                </div>
+
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <motion.div
@@ -44,16 +42,6 @@ export default function About() {
                             <div className="overflow-hidden rounded shadow-lg mt-4 md:mt-8"><img alt="Workplace" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" /></div>
                             <div className="overflow-hidden rounded shadow-lg -mt-4 md:-mt-8"><img alt="Tech office" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80" /></div>
                             <div className="overflow-hidden rounded shadow-lg"><img alt="Meeting" className="w-full h-32 md:h-64 object-cover hover:scale-110 transition-transform duration-700" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80" /></div>
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.5 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.6, delay: 0.4, type: "spring" }}
-                                viewport={{ once: true }}
-                                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-white p-4 md:p-8 rounded shadow-2xl text-center min-w-[120px] md:min-w-[180px] hover:scale-110 hover:shadow-primary/50 transition-all cursor-default z-10"
-                            >
-                                <div className="text-xl md:text-2xl font-semibold">Modern</div>
-                                <div className="text-xs md:text-sm font-semibold uppercase">Staffing<br />Solutions</div>
-                            </motion.div>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 50 }}
@@ -62,7 +50,7 @@ export default function About() {
                             viewport={{ once: true, margin: "-50px" }}
                         >
                             <div className="flex flex-col gap-2 mb-4">
-                                <span className="inline-block bg-light-teal text-primary px-4 py-1 rounded text-xs font-semibold uppercase tracking-widest self-start">Our Company</span>
+                                <span className="inline-block bg-light-teal text-primary px-5 py-2 rounded-full text-sm font-bold uppercase tracking-widest self-start">Zest Technologies LLC</span>
                                 <span className="text-primary/80 font-bold tracking-wider text-xs uppercase">Energy. Expertise. Excellence.</span>
                             </div>
                             <h2 className="text-4xl md:text-5xl font-semibold mb-8 leading-tight">Your Success, Our Commitment: <span className="text-primary relative inline-block group">Exceptional Staffing<span className="absolute bottom-0 left-0 w-0 h-1 bg-primary/30 transition-all duration-300 group-hover:w-full"></span></span> & IT Solutions</h2>
@@ -252,10 +240,10 @@ export default function About() {
                 >
                     <div className="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <div className="relative z-10">
-                        <h2 className="text-4xl font-semibold mb-2">Grow Fast Your Business</h2>
+
                         <p className="text-white/80">Ready to scale your technical infrastructure? Contact our consulting team for a specialized architectural review.</p>
                     </div>
-                    <button className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1">Contact Now</button>
+                    <Link to="/contact" className="relative z-10 bg-white text-[#001D3D] px-10 py-4 rounded-full font-semibold hover:bg-slate-100 transition-all shadow-xl hover:-translate-y-1 block md:inline-block text-center">Contact Now</Link>
                 </motion.div>
             </section>
         </>

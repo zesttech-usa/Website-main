@@ -10,6 +10,7 @@ import Jobseekers from './pages/Jobseekers';
 import Careers from './pages/Careers';
 import JobDetail from './pages/JobDetail';
 import AdminPanel from './pages/AdminPanel';
+import Appointment from './pages/Appointment';
 import ScrollToTop from './components/ScrollToTop';
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/appointment" element={<Appointment />} />
             <Route path="/zest-admin" element={<AdminPanel />} />
           </Routes>
         </main>

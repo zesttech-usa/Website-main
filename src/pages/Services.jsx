@@ -70,9 +70,9 @@ export default function Services() {
                             <p className="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-xl leading-relaxed">
                                 We deliver pioneering, secure, and elastic IT infrastructures that overcome complex hurdles and generate quantifiable impact for your expanding enterprise.
                             </p>
-                            <button className="bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/30 hover:-translate-y-1">
+                            <Link to="/jobseekers" className="inline-block bg-primary hover:bg-primary-hover text-white px-10 py-4 rounded-full font-semibold transition-all shadow-lg hover:shadow-primary/30 hover:-translate-y-1">
                                 Get Started
-                            </button>
+                            </Link>
                         </motion.div>
 
                         {/* Right Content Grid (like the reference image) */}
@@ -280,9 +280,9 @@ export default function Services() {
                         <p className="text-[#001D3D]/80 dark:text-slate-300 md:text-lg mb-10 max-w-xl leading-relaxed">
                             Leveraging deep-domain expertise in cloud engineering, enterprise logic, and bespoke development, we enable organizations to navigate technical shifts with absolute precision and speed.
                         </p>
-                        <button className="bg-white text-[#001D3D] px-10 py-5 rounded-full font-semibold shadow-2xl shadow-[#001D3D]/10 hover:shadow-xl hover:scale-105 transition-all">
+                        <Link to="/jobseekers" className="inline-block bg-white text-[#001D3D] px-10 py-5 rounded-full font-semibold shadow-2xl shadow-[#001D3D]/10 hover:shadow-xl hover:scale-105 transition-all">
                             Get a Free Consultation
-                        </button>
+                        </Link>
                     </motion.div>
                 </div>
             </section>

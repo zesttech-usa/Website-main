@@ -61,8 +61,8 @@ export default function Contact() {
                                         <span className="material-symbols-outlined text-3xl">location_on</span>
                                     </div>
                                     <div>
-                                        <h4 className="text-xl font-bold mb-2 text-[#001D3D] dark:text-white group-hover:text-primary transition-colors">Head Office</h4>
-                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">1 Mid America Plaza<br />3rd Floor, Suite 300 PMB 7084<br />Oakbrook Terrace, IL 60181, United States</p>
+                                        <h4 className="text-xl font-bold mb-2 text-[#001D3D] dark:text-white group-hover:text-primary transition-colors">Location</h4>
+                                        <p className="text-slate-600 dark:text-slate-400 leading-relaxed">1 Mid America Plaza<br />Suite 300 PMB 7084<br />Oakbrook Terrace, IL 60181, United States</p>
                                     </div>
                                 </div>
 
@@ -85,7 +85,7 @@ export default function Contact() {
                                     <div>
                                         <h4 className="text-xl font-bold mb-2 text-[#001D3D] dark:text-white group-hover:text-primary transition-colors">Email Address</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            <a href="mailto:Info@zesttechus.com" className="hover:text-primary transition-colors font-semibold">Info@zesttechus.com</a>
+                                            <a href="mailto:HR@zesttechus.com" className="hover:text-primary transition-colors font-semibold">hr@zesttechus.com</a>
                                         </p>
                                     </div>
                                 </div>
@@ -100,6 +100,26 @@ export default function Contact() {
                             viewport={{ once: true, margin: "-50px" }}
                             className="lg:col-span-3"
                         >
+                            <motion.div
+                                initial={{ opacity: 0, y: -20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 }}
+                                viewport={{ once: true }}
+                                className="mb-8"
+                            >
+                                <Link
+                                    to="/appointment"
+                                    className="w-full bg-light-teal dark:bg-primary/20 text-primary font-bold py-6 rounded-2xl border-2 border-dashed border-primary/30 flex items-center justify-center gap-4 hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/30 transition-all group shadow-sm"
+                                >
+                                    <span className="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">event_available</span>
+                                    <div className="text-left">
+                                        <h4 className="text-lg leading-tight">Book a Discovery Call Appointment</h4>
+                                        <p className="text-xs text-primary/70 font-semibold uppercase tracking-wider">Schedule a strategic consultation on our calendar</p>
+                                    </div>
+                                    <span className="material-symbols-outlined ml-auto mr-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all">arrow_forward</span>
+                                </Link>
+                            </motion.div>
+
                             <div className="bg-white dark:bg-navy-950 p-10 md:p-12 rounded-2xl shadow-2xl border border-slate-100 dark:border-navy-800 relative overflow-hidden group/form">
                                 <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-20 -mt-20 group-hover/form:bg-light-teal transition-colors duration-700 pointer-events-none"></div>
 

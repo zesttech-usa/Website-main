@@ -18,31 +18,31 @@ export default function Footer() {
                                 <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="https://www.linkedin.com/company/zest-technologies-llc" target="_blank" rel="noopener noreferrer">
                                     <Linkedin className="w-5 h-5" />
                                 </a>
-                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="mailto:Info@zesttechus.com">
+                                <a className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors" href="mailto:HR@zesttechus.com">
                                     <span className="material-symbols-outlined text-sm">alternate_email</span>
                                 </a>
                             </div>
                         </div>
                         <div>
-                            <h4 className="text-xl font-semibold mb-8 flex items-center gap-2">Useful Links <span className="h-1 w-8 bg-primary"></span></h4>
+                            <h4 className="text-xl font-semibold mb-8 flex items-center gap-2">Links <span className="h-1 w-8 bg-primary"></span></h4>
                             <ul className="space-y-4 text-slate-400 text-sm">
                                 <li><a className="hover:text-primary transition-colors" href="/">Home</a></li>
                                 <li><a className="hover:text-primary transition-colors" href="/about">About</a></li>
                                 <li><a className="hover:text-primary transition-colors" href="/services">Services</a></li>
                                 <li><a className="hover:text-primary transition-colors" href="/industries">Industries</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Blog</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Career</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/">Blog</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/careers">Career</a></li>
                                 <li><a className="hover:text-primary transition-colors" href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div>
-                            <h4 className="text-xl font-semibold mb-8 flex items-center gap-2">Our Services <span className="h-1 w-8 bg-primary"></span></h4>
+                            <h4 className="text-xl font-semibold mb-8 flex items-center gap-2">Services <span className="h-1 w-8 bg-primary"></span></h4>
                             <ul className="space-y-4 text-slate-400 text-sm">
-                                <li><a className="hover:text-primary transition-colors" href="#">IT Staffing Solutions</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Technical Recruitment</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">AI & Machine Learning</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Big Data & Analytics</a></li>
-                                <li><a className="hover:text-primary transition-colors" href="#">Web & App Development</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/services">IT Staffing Solutions</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/services">Technical Recruitment</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/services">AI & Machine Learning</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/services">Big Data & Analytics</a></li>
+                                <li><a className="hover:text-primary transition-colors" href="/services">Web & App Development</a></li>
                             </ul>
                         </div>
                         <div>
@@ -52,14 +52,14 @@ export default function Footer() {
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">location_on</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Address</h5>
-                                        <p className="text-xs text-slate-400 leading-relaxed">Head Office: 1 Mid America Plaza, 3rd Floor, Suite 300 PMB 7084, Oakbrook Terrace, IL 60181, United States</p>
+                                        <p className="text-xs text-slate-400 leading-relaxed">Location: 1 Mid America Plaza, Suite 300 PMB 7084, Oakbrook Terrace, IL 60181, United States</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
                                     <div className="w-10 h-10 rounded-full bg-primary flex-shrink-0 flex items-center justify-center"><span className="material-symbols-outlined text-xl">mail</span></div>
                                     <div>
                                         <h5 className="font-semibold mb-1 text-sm">Email</h5>
-                                        <p className="text-xs text-slate-400">Info@zesttechus.com</p>
+                                        <p className="text-xs text-slate-400">hr@zesttechus.com</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
@@ -75,9 +75,9 @@ export default function Footer() {
                     <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
                         <p>© 2024 ZEST TECHNOLOGIES LLC All Rights Reserved.</p>
                         <div className="flex gap-6 mt-4 md:mt-0">
-                            <a className="hover:text-primary" href="#">Privacy Policy</a>
-                            <a className="hover:text-primary" href="#">Terms of Use</a>
-                            <a className="hover:text-primary" href="#">Cookie Settings</a>
+                            <a className="hover:text-primary" href="/contact">Privacy Policy</a>
+                            <a className="hover:text-primary" href="/contact">Terms of Use</a>
+                            <a className="hover:text-primary" href="/contact">Cookie Settings</a>
                         </div>
                     </div>
                 </div>
