@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
+import Testimonial from '../components/ui/testimonial';
 
 export default function About() {
     return (
@@ -231,6 +232,64 @@ export default function About() {
                                 </p>
                             </motion.div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="py-24 bg-slate-50 dark:bg-navy-950 overflow-hidden">
+                <div className="container mx-auto px-6">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <motion.span
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="inline-block bg-primary/10 text-primary px-10 py-4 rounded-full text-2xl md:text-3xl font-bold uppercase tracking-[0.3em] shadow-lg border border-primary/20"
+                        >
+                            Testimonials
+                        </motion.span>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            viewport={{ once: true }}
+                        >
+                            <Testimonial
+                                author="Arjun Sharma"
+                                role="Systems Analyst"
+                                image="/assets/avatars/arjun.png"
+                                quote="The transition to our new platform was incredibly smooth. Their depth of knowledge and commitment to understanding our specific workflow made a huge difference in the final outcome."
+                            />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
+                        >
+                            <Testimonial
+                                author="Emma Davis"
+                                role="Project Lead"
+                                image="/assets/avatars/emma.png"
+                                quote="I was impressed by how quickly they integrated with our internal team. It genuinely felt like they were part of our company, working towards the same goals with the same level of care."
+                            />
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            viewport={{ once: true }}
+                        >
+                            <Testimonial
+                                author="Marcus Thorne"
+                                role="Senior Engineer"
+                                image="/assets/avatars/marcus.png"
+                                quote="Their approach to technical challenges is refreshing. They didn't just give us a standard solution; they took the time to map out the best architectural path for our long-term scaling needs."
+                            />
+                        </motion.div>
                     </div>
                 </div>
             </section>

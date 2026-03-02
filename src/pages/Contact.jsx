@@ -91,7 +91,7 @@ export default function Contact() {
                                     <div>
                                         <h4 className="text-xl font-bold mb-2 text-[#001D3D] dark:text-white group-hover:text-primary transition-colors">Email Address</h4>
                                         <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
-                                            <a href="mailto:HR@zesttechus.com" className="hover:text-primary transition-colors font-semibold">hr@zesttechus.com</a>
+                                            <a href="mailto:hr@zesttechusa.com" className="hover:text-primary transition-colors font-semibold">hr@zesttechusa.com</a>
                                         </p>
                                     </div>
                                 </div>
